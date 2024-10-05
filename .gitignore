@@ -1,0 +1,8 @@
+#ignore the audios folder in the root
+/audios/
+
+#ignore the audios folder inside dataset_creation
+/dataset_creation/audios/
+
+#ignore big file soundfont
+/audio2midi2audio/FluidR3_GM.sf2
