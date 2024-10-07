@@ -1,12 +1,3 @@
-import warnings
-import logging
-
-# Suppress all warnings
-warnings.filterwarnings("ignore")
-
-# Suppress logs below ERROR level
-logging.getLogger().setLevel(logging.ERROR) 
-
 import pandas as pd
 import numpy as np
 import random
@@ -271,10 +262,10 @@ data = {
 }
 
 #number of data generaterd
-n_data = 10
+n_data = 2
 
 #file names
-csv_filename = "../results/df_model_tests.csv"
+csv_filename = "../results/df_model_testsasdfajadsfjk.csv"
 soundfont = '../audio2midi2audio/FluidR3_GM.sf2'  # Path to your SoundFont file
 
 #guitar specifications
