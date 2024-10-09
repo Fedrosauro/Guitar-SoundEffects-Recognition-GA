@@ -1,3 +1,13 @@
+import warnings
+import logging
+import time
+
+# Suppress all warnings
+warnings.filterwarnings("ignore")
+
+# Suppress logs below ERROR level
+logging.getLogger().setLevel(logging.ERROR)
+
 import pandas as pd
 import numpy as np
 import random
@@ -196,17 +206,16 @@ def process_data_generation_lines(soundfont, program, min_note, max_note, min_du
     return result_data
     
     
-def test_model_db_creation_parallel(data, n_data, csv_filename, soundfont, program, min_note, max_note, min_duration, max_duration, effects, effect_structure, effects_map, threshold_values, fan_out_values, max_distance_atan_values, onset_threshold_values, frame_threshold_values, max_key_distance_values):
-    # Generate all parameter combinations including max_key_distance
+def test_model_db_creation_parallel(data, n_data, csv_filename, soundfont, program, min_note, max_note, min_duration, max_duration, effects, effect_structure, effects_map, threshold_values, fan_out_values, max_distance_atan_values, onset_threshold, frame_threshold, max_key_distance_values):
     param_combinations = list(itertools.product(
         threshold_values,
         fan_out_values,
         max_distance_atan_values,
-        onset_threshold_values,
-        frame_threshold_values,
+        [onset_threshold],  # Wrap in list to keep the structure
+        [frame_threshold],  # Wrap in list to keep the structure
         max_key_distance_values
     ))
-
+    
     n_workers = os.cpu_count() - 1
     
     with concurrent.futures.ProcessPoolExecutor(max_workers=n_workers) as executor:
@@ -262,33 +271,33 @@ data = {
 }
 
 #number of data generaterd
-n_data = 2
+n_data = 1
 
 #file names
-csv_filename = "../results/df_model_testsasdfajadsfjk.csv"
+csv_filename = "../results/df_model_test_3600_test.csv"
 soundfont = '../audio2midi2audio/FluidR3_GM.sf2'  # Path to your SoundFont file
 
 #guitar specifications
 program = 30
 min_note = 'E2'
 max_note = 'E6' # Generate a random note between MIDI note 40 (E2) and 88 (E6)
-min_duration = 3
+min_duration = 5
 max_duration = 20
 
 #EXTERNAL PARAMS
-threshold_values = np.arange(1, 3.25, 0.25)
-fan_out_values = np.arange(5, 35, 5)
+threshold_values = np.arange(1, 4, 0.25)
+fan_out_values = np.arange(5, 55, 5)
 max_distance_atan_values = np.arange(50, 110, 10)
-onset_threshold_values = np.arange(0.2, 0.8, 0.2)
-frame_threshold_values = np.arange(0.2, 0.8, 0.2)
+onset_threshold = 0.5  # standard value that is used by the library (no need to be changed)
+frame_threshold = 0.3  # standard value that is used by the library (no need to be changed)
 max_key_distance_values = np.arange(10, 60, 10)
 
-threshold_values = np.arange(2, 3.5, 0.5)
-fan_out_values = np.arange(10, 30, 10)
-max_distance_atan_values = np.arange(90, 110, 10)
-onset_threshold_values = np.arange(0.4, 0.8, 0.2)
-frame_threshold_values = np.arange(0.4, 0.8, 0.2)
-max_key_distance_values = np.arange(20, 60, 20)
+#threshold_values = np.arange(2, 3.5, 0.5)
+#fan_out_values = np.arange(10, 30, 10)
+#max_distance_atan_values = np.arange(90, 110, 10)
+#onset_threshold_values = np.arange(0.4, 0.8, 0.2)
+#frame_threshold_values = np.arange(0.4, 0.8, 0.2)
+#max_key_distance_values = np.arange(20, 60, 20)
 
 #effects used
 n_effects = 6
@@ -312,4 +321,6 @@ effects_map = {
 
 # Test with the parameter combinations
 if __name__ == '__main__':
-    test_model_db_creation_parallel(data, n_data, csv_filename, soundfont, program, min_note, max_note, min_duration, max_duration, effects, effect_structure, effects_map, threshold_values, fan_out_values, max_distance_atan_values, onset_threshold_values, frame_threshold_values, max_key_distance_values)
+    start = time.time()
+    test_model_db_creation_parallel(data, n_data, csv_filename, soundfont, program, min_note, max_note, min_duration, max_duration, effects, effect_structure, effects_map, threshold_values, fan_out_values, max_distance_atan_values, onset_threshold, frame_threshold, max_key_distance_values)
+    print(f"Total time for n_data = 1 and 3600 iteration basic: {time.time() - start}")
