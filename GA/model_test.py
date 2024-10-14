@@ -97,7 +97,7 @@ def midi_to_mp3_w_path_remov(midi_file, audio_path, soundfont):
     
     Path(wav_file).unlink(missing_ok=True)
 
-    print(f"Conversion complete: {audio_path}")
+    #print(f"Conversion complete: {audio_path}")
 
 def process_data_generation_lines(soundfont, program, min_note, max_note, min_duration, max_duration, effects, effect_structure, effects_map, threshold, fan_out, max_distance_atan, onset_threshold, frame_threshold, max_key_distance):   
     # Create temporary MIDI and MP3 files

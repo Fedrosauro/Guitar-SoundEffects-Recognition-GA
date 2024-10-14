@@ -3,6 +3,7 @@
 
 #ignore the audios folder inside dataset_creation
 /dataset_creation/audios/
+/dataset_creation/violin_audios/
 
 #ignore big file soundfont
 /audio2midi2audio/FluidR3_GM.sf2
