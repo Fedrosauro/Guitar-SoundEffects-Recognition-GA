@@ -208,15 +208,15 @@ def process_data_generation_lines(soundfont, program, min_note, max_note, min_du
     
 def test_model_db_creation_parallel(data, n_data, csv_filename, soundfont, program, min_note, max_note, min_duration, max_duration, effects, effect_structure, effects_map, threshold, fan_out, max_distance_atan, onset_threshold, frame_threshold, max_key_distance):
     param_combinations = list(itertools.product(
-        [threshold],
-        [fan_out],
+        threshold,
+        fan_out,
         [max_distance_atan],
         [onset_threshold],  
         [frame_threshold],  
         [max_key_distance]
     ))
     
-    n_workers = os.cpu_count() - 1
+    n_workers = 7
     
     with concurrent.futures.ProcessPoolExecutor(max_workers=n_workers) as executor:
         futures = []
@@ -271,10 +271,10 @@ data = {
 }
 
 #number of data generaterd
-n_data = 600
+n_data = 1
 
 #file names
-csv_filename = "../results/df_model_test_with_best_values.csv"
+csv_filename = "../results/df_model_test_threshold_fan_out.csv"
 soundfont = '../audio2midi2audio/FluidR3_GM.sf2'  # Path to your SoundFont file
 
 #guitar specifications
@@ -287,13 +287,13 @@ max_duration = 20
 #EXTERNAL PARAMS
 threshold = 1.5 #best value found
 fan_out = 10 #best value found
-max_distance_atan = 80 #best value found
+max_distance_atan = 20 #best value found
 onset_threshold = 0.5  # standard value that is used by the library (no need to be changed)
 frame_threshold = 0.3  # standard value that is used by the library (no need to be changed)
-max_key_distance = 95 #best value found
+max_key_distance = 50 #best value found
 
-#threshold_values = np.arange(2, 3.5, 0.5)
-#fan_out_values = np.arange(10, 30, 10)
+threshold_values = np.arange(0.0, 3.2, 0.01)
+fan_out_values = np.arange(5, 35, 5)
 #max_distance_atan_values = np.arange(90, 110, 10)
 #onset_threshold_values = np.arange(0.4, 0.8, 0.2)
 #frame_threshold_values = np.arange(0.4, 0.8, 0.2)
@@ -322,5 +322,5 @@ effects_map = {
 # Test with the parameter combinations
 if __name__ == '__main__':
     start = time.time()
-    test_model_db_creation_parallel(data, n_data, csv_filename, soundfont, program, min_note, max_note, min_duration, max_duration, effects, effect_structure, effects_map, threshold, fan_out, max_distance_atan, onset_threshold, frame_threshold, max_key_distance)
+    test_model_db_creation_parallel(data, n_data, csv_filename, soundfont, program, min_note, max_note, min_duration, max_duration, effects, effect_structure, effects_map, threshold_values, fan_out_values, max_distance_atan, onset_threshold, frame_threshold, max_key_distance)
     print(f"Total time: {time.time() - start}")

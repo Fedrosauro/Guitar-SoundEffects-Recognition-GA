@@ -1,0 +1,27 @@
+audio_name,applied_effects,GA_effects,similarity_indv
+0.mp3,{1: {'delay_seconds': 3.08}},"{5: {'wet_level': 0.39}, 0: {'rate_hz': 11.37}, 1: {'delay_seconds': 8.66}, 3: {'gain_db': -27.9}}",0.04841040462427745
+1.mp3,"{5: {'wet_level': 0.84}, 3: {'gain_db': -46.0}}",{0: {'rate_hz': 8.8}},0.0
+2.mp3,"{1: {'delay_seconds': 6.24}, 2: {'drive_db': 29.06}, 4: {'depth': 0.76}, 5: {'wet_level': 0.33}, 0: {'rate_hz': 83.2}}","{0: {'rate_hz': 11.18}, 3: {'gain_db': -44.64}, 4: {'depth': 0.84}, 1: {'delay_seconds': 8.07}}",0.34716852226720646
+3.mp3,"{4: {'depth': 0.8}, 5: {'wet_level': 0.46}, 1: {'delay_seconds': 4.52}}","{3: {'gain_db': -38.27}, 5: {'wet_level': 0.49}, 1: {'delay_seconds': 1.64}}",0.47296566639632337
+4.mp3,"{1: {'delay_seconds': 1.95}, 2: {'drive_db': 25.12}}","{4: {'depth': 0.93}, 1: {'delay_seconds': 2.34}, 5: {'wet_level': 0.75}, 2: {'drive_db': 47.75}}",0.262669249713178
+5.mp3,"{2: {'drive_db': 4.98}, 3: {'gain_db': 16.68}, 4: {'depth': 0.02}, 0: {'rate_hz': 58.33}, 1: {'delay_seconds': 4.34}}","{2: {'drive_db': 33.22}, 5: {'wet_level': 0.58}, 1: {'delay_seconds': 1.98}, 3: {'gain_db': 36.57}, 0: {'rate_hz': 20.81}, 4: {'depth': 0.62}}",0.40033168451654055
+6.mp3,"{4: {'depth': 0.73}, 1: {'delay_seconds': 2.48}, 5: {'wet_level': 0.03}, 3: {'gain_db': 9.65}, 2: {'drive_db': 49.5}, 0: {'rate_hz': 1.7}}","{2: {'drive_db': 45.69}, 1: {'delay_seconds': 3.2}, 0: {'rate_hz': 14.77}}",0.44905421610752666
+7.mp3,{3: {'gain_db': -8.19}},"{4: {'depth': 0.07}, 5: {'wet_level': 0.66}, 3: {'gain_db': -18.88}}",0.2720971530045254
+8.mp3,"{5: {'wet_level': 0.85}, 1: {'delay_seconds': 5.22}, 2: {'drive_db': 46.59}, 3: {'gain_db': 23.28}}","{1: {'delay_seconds': 4.17}, 3: {'gain_db': -14.06}, 5: {'wet_level': 0.12}}",0.35761866088853855
+9.mp3,{4: {'depth': 0.11}},"{1: {'delay_seconds': 2.02}, 2: {'drive_db': 48.09}, 3: {'gain_db': 21.68}, 0: {'rate_hz': 93.43}, 5: {'wet_level': 0.93}, 4: {'depth': 0.92}}",0.014981273408239699
+10.mp3,"{3: {'gain_db': 18.74}, 2: {'drive_db': 35.14}, 1: {'delay_seconds': 7.73}, 4: {'depth': 0.72}}","{3: {'gain_db': -48.91}, 4: {'depth': 0.71}, 1: {'delay_seconds': 2.09}, 5: {'wet_level': 0.15}, 0: {'rate_hz': 27.55}}",0.2544686249448951
+11.mp3,"{1: {'delay_seconds': 8.11}, 4: {'depth': 0.67}, 5: {'wet_level': 0.01}, 3: {'gain_db': -35.19}, 2: {'drive_db': 25.43}, 0: {'rate_hz': 24.72}}","{0: {'rate_hz': 55.44}, 1: {'delay_seconds': 0.09}, 3: {'gain_db': 15.37}}",0.16825400115858263
+0.mp3,"{1: {'delay_seconds': 7.97}, 5: {'wet_level': 0.29}, 3: {'gain_db': -23.39}, 4: {'depth': 0.57}, 2: {'drive_db': 48.96}}","{3: {'gain_db': -49.51}, 1: {'delay_seconds': 2.12}, 4: {'depth': 0.95}, 0: {'rate_hz': 4.34}}",0.24868480492631762
+1.mp3,{0: {'rate_hz': 34.41}},"{1: {'delay_seconds': 4.7}, 2: {'drive_db': 0.85}, 3: {'gain_db': 0.93}}",0.0
+2.mp3,"{2: {'drive_db': 19.65}, 4: {'depth': 0.61}}","{1: {'delay_seconds': 8.6}, 4: {'depth': 0.41}}",0.3360655737704918
+3.mp3,"{3: {'gain_db': -28.75}, 4: {'depth': 0.29}, 0: {'rate_hz': 57.8}, 1: {'delay_seconds': 8.8}, 2: {'drive_db': 34.25}}","{3: {'gain_db': -17.38}, 1: {'delay_seconds': 3.88}}",0.2593056277056277
+4.mp3,"{2: {'drive_db': 14.37}, 4: {'depth': 0.03}, 3: {'gain_db': 30.56}, 5: {'wet_level': 0.31}, 1: {'delay_seconds': 2.33}}","{5: {'wet_level': 0.83}, 0: {'rate_hz': 0.51}, 3: {'gain_db': -47.27}, 4: {'depth': 0.89}, 1: {'delay_seconds': 2.9}}",0.2638702287915763
+5.mp3,"{0: {'rate_hz': 63.78}, 3: {'gain_db': 40.15}, 1: {'delay_seconds': 4.18}, 2: {'drive_db': 22.2}, 5: {'wet_level': 0.22}}","{3: {'gain_db': 43.88}, 1: {'delay_seconds': 4.64}, 2: {'drive_db': 48.43}, 0: {'rate_hz': 69.66}}",0.5687739248929536
+6.mp3,{4: {'depth': 0.09}},"{3: {'gain_db': -49.8}, 1: {'delay_seconds': 2.95}, 4: {'depth': 0.21}, 5: {'wet_level': 0.06}}",0.21703296703296704
+7.mp3,{5: {'wet_level': 0.82}},"{5: {'wet_level': 0.54}, 3: {'gain_db': 26.12}}",0.3292682926829269
+8.mp3,"{4: {'depth': 0.18}, 3: {'gain_db': 11.46}}","{4: {'depth': 0.0}, 1: {'delay_seconds': 1.39}, 3: {'gain_db': -46.55}, 5: {'wet_level': 0.19}}",0.20915546895462447
+9.mp3,"{2: {'drive_db': 35.12}, 5: {'wet_level': 0.87}, 3: {'gain_db': 19.04}, 4: {'depth': 0.94}, 1: {'delay_seconds': 0.56}, 0: {'rate_hz': 37.19}}","{2: {'drive_db': 46.98}, 0: {'rate_hz': 3.32}, 5: {'wet_level': 0.32}, 1: {'delay_seconds': 6.01}, 3: {'gain_db': 47.41}}",0.41710328644233646
+10.mp3,"{2: {'drive_db': 35.48}, 5: {'wet_level': 0.81}, 4: {'depth': 0.17}, 1: {'delay_seconds': 0.86}, 0: {'rate_hz': 31.0}}","{3: {'gain_db': -21.32}, 0: {'rate_hz': 29.62}, 1: {'delay_seconds': 6.52}}",0.27214879649890594
+11.mp3,"{1: {'delay_seconds': 0.04}, 4: {'depth': 0.25}, 0: {'rate_hz': 15.63}, 5: {'wet_level': 0.88}, 2: {'drive_db': 11.79}, 3: {'gain_db': -2.47}}","{0: {'rate_hz': 46.04}, 4: {'depth': 0.32}, 5: {'wet_level': 0.44}}",0.34103841544519503
+12.mp3,"{5: {'wet_level': 0.15}, 4: {'depth': 0.68}, 1: {'delay_seconds': 5.11}}","{1: {'delay_seconds': 8.88}, 4: {'depth': 0.79}, 2: {'drive_db': 25.23}}",0.36682207129427113
+13.mp3,"{4: {'depth': 0.86}, 3: {'gain_db': 0.74}, 2: {'drive_db': 7.32}}","{0: {'rate_hz': 11.9}, 2: {'drive_db': 31.58}, 5: {'wet_level': 0.95}}",0.14386129334582945
