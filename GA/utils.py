@@ -234,9 +234,9 @@ def fitness_lines_difference_for_parallel_comp(individual, clear_audio_path, has
             x_intersection =  (q2 - q1)/(m1 - m2)
             diss = dissimilarity_lines_difference_angle_correction(m1, q1, m2, q2, x_intersection >= max_x * 2 or x_intersection <= -max_x * 0.5, max_distance_atan)
         else:
-            diss = 1000.0
+            return individual, 1000.0
     else:
-        diss = 1000.0
+        return individual, 1000.0
         
     Path(temp_mp3_clear_name).unlink(missing_ok=True)
     Path(temp_effected_audio_name).unlink(missing_ok=True)
@@ -244,7 +244,7 @@ def fitness_lines_difference_for_parallel_comp(individual, clear_audio_path, has
     return individual, diss * (len(original_or_times) / len(or_times))
 
 def parallel_fitness_calculation(pop, clear_audio_path, hash_table, m1, q1, or_times, constellation_map_alg, threshold, fan_out, fit, max_key_distance, max_distance_atan, effects_map):
-    n_workers = 5
+    n_workers = 4
     results = []
 
     with concurrent.futures.ProcessPoolExecutor(max_workers=n_workers) as executor:
@@ -437,9 +437,6 @@ def GA_lines_comp(clear_audio_path, desired_audio_path, threshold, fan_out, max_
   for i in range(0, n_iter):
     print(f"Iteration: {i}")
     
-    for ind in pop:
-        print(ind)
-    
     pop_with_fitness = parallel_fitness_calculation(
         pop, clear_audio_path, hash_table, m1, q1, or_times, constellation_map_alg, threshold, fan_out, fit, max_key_distance, max_distance_atan, effects_map
     )
@@ -470,7 +467,7 @@ def GA_lines_comp(clear_audio_path, desired_audio_path, threshold, fan_out, max_
     offsprings = []
     for x in offsprings_cross:
         if random.random() < p_mutation:
-            of1 = aggressive_mutation(inner_mutation(x, effect_structure), p_pop_item, p_add_new_effect, effects, effect_structure, p_mutation)
+            of1 = mutation(inner_mutation(x, effect_structure), p_pop_item, p_add_new_effect, effects, effect_structure)
             offsprings.append(of1)
         else:
             offsprings.append(x)
@@ -492,7 +489,7 @@ def GA_lines_comp(clear_audio_path, desired_audio_path, threshold, fan_out, max_
       j = i
     print(f"Best fitness at generation {j}: {fit(best, clear_audio_path, hash_table, m1, q1, or_times, constellation_map_alg, threshold, fan_out, max_key_distance, max_distance_atan, effects_map)}\n")
 
-  return best
+  return fit(best, clear_audio_path, hash_table, m1, q1, or_times, constellation_map_alg, threshold, fan_out, max_key_distance, max_distance_atan, effects_map)
 
 def GA_lines_comp_pm_pc_adaptive(clear_audio_path, desired_audio_path, threshold, fan_out, max_distance_atan, max_key_distance, constellation_map_alg, fit, pop_size, p_mutation, p_crossover, p_pop_item, p_add_new_effect, n_iter, t_size, effects, effect_structure, effects_map, theta_1, theta_2):
   pop = init_population(pop_size, effects, effect_structure)

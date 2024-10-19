@@ -1,0 +1,11 @@
+audio_name,applied_effects,GA_effects,similarity_indv
+0.mp3,"{3: {'gain_db': 2.48}, 0: {'rate_hz': 1.73}, 5: {'wet_level': 0.28}, 2: {'drive_db': 15.49}, 4: {'depth': 0.52}, 1: {'delay_seconds': 4.6}}",,
+1.mp3,"{4: {'depth': 0.35}, 1: {'delay_seconds': 2.5}, 3: {'gain_db': -3.83}}",,
+2.mp3,"{4: {'depth': 0.53}, 1: {'delay_seconds': 1.88}, 3: {'gain_db': -6.01}, 2: {'drive_db': 7.22}}",,
+3.mp3,"{5: {'wet_level': 0.26}, 4: {'depth': 0.51}, 3: {'gain_db': -1.91}, 2: {'drive_db': 4.96}, 0: {'rate_hz': 11.24}, 1: {'delay_seconds': 1.32}}",,
+4.mp3,"{1: {'delay_seconds': 4.74}, 2: {'drive_db': 10.25}, 4: {'depth': 0.39}, 3: {'gain_db': 3.33}, 0: {'rate_hz': 10.53}}",,
+5.mp3,"{2: {'drive_db': 16.92}, 5: {'wet_level': 0.25}, 3: {'gain_db': -8.84}, 1: {'delay_seconds': 2.63}, 4: {'depth': 0.34}}",,
+6.mp3,"{5: {'wet_level': 0.54}, 3: {'gain_db': -0.85}, 4: {'depth': 0.29}, 1: {'delay_seconds': 2.09}, 2: {'drive_db': 4.11}}",,
+7.mp3,"{0: {'rate_hz': 8.47}, 5: {'wet_level': 0.55}, 4: {'depth': 0.57}, 3: {'gain_db': 0.74}}",,
+8.mp3,"{1: {'delay_seconds': 2.1}, 5: {'wet_level': 0.59}, 4: {'depth': 0.36}, 2: {'drive_db': 18.3}}",,
+9.mp3,"{2: {'drive_db': 5.13}, 1: {'delay_seconds': 3.36}, 0: {'rate_hz': 10.04}, 5: {'wet_level': 0.22}, 4: {'depth': 0.43}, 3: {'gain_db': -9.28}}",,

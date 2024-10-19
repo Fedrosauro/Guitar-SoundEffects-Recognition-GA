@@ -44,7 +44,7 @@ effects_map = {
 #################################################
 #      EFFECTS TO TEST GUITAR EFFECTS REC.
 #################################################
-
+'''
 n_effects = 6
 effects = [i for i in range(n_effects)]
 effect_structure = {
@@ -62,8 +62,7 @@ effects_map = {
     3: 'Gain',
     4: 'Phaser',
     5: 'Reverb',
-}
-
+}'''
 
 onset_threshold = 0.5
 frame_threshold = 0.3
@@ -72,23 +71,23 @@ fan_out = 25
 max_distance_atan = 20 
 max_key_distance = 50 
 
-instrument_program = 30
+instrument_program = 30 #guitar 30, violin 40
 constellation_map_alg = z_score_peaks_calculation
 fitness = fitness_lines_difference_for_parallel_comp
 
-pop_size = 10
+pop_size = 100
 p_mutation = 0.8
-p_crossover = 0.5
+p_crossover = 0.4
 p_pop_item = 0.5
 p_add_new_effect = 0.5
-n_iter = 50
-t_size = 2
+n_iter = 10
+t_size = 5
 
 soundfont = '../audio2midi2audio/FluidR3_GM.sf2'  # Path to your SoundFont file
 clear_audio_path = 'clear_audio.mp3'
 midi_path = 'clear_midi.mid'
 
-df = pd.read_csv('../results/dataset_audios_guitar_aggr_mut_low_setup.csv')
+df = pd.read_csv('../results/dataset_audios_violin.csv')
 
 def dataset_GA_execution_general(df, 
                             onset_threshold,
@@ -113,16 +112,18 @@ def dataset_GA_execution_general(df,
                             effects,
                             effect_structure,
                             effects_map):
-    temp_data = []
+    
+    temp_data_ga_effects = []
+    temp_data_best_fit = []
 
     for _, row in df.iterrows():
-        desired_audio_path = '../dataset_creation/audios/' + row["audio_name"]
+        desired_audio_path = '../dataset_creation/violin_audios/' + row["audio_name"]
         #desired_audio_path = '../dataset_creation/test_audios/78.mp3'
         print(desired_audio_path)
         mp3_to_midi(desired_audio_path, midi_path, onset_threshold, frame_threshold, instrument_program)
         midi_to_mp3(midi_path, clear_audio_path, soundfont)
         
-        best_invdivid = GA_lines_comp(clear_audio_path, 
+        best_invdivid, best_fit = GA_lines_comp(clear_audio_path, 
                                         desired_audio_path,
                                         threshold,
                                         fan_out,
@@ -141,10 +142,11 @@ def dataset_GA_execution_general(df,
                                         effect_structure,
                                         effects_map)    
         print(best_invdivid)
-        break
-        temp_data.append(best_invdivid)
-        df['GA_effects'] = pd.Series(temp_data)
-        df.to_csv('../results/dataset_audios.csv', index=False)
+        temp_data_ga_effects.append(best_invdivid)
+        temp_data_best_fit.append(best_fit)
+        df['GA_effects'] = pd.Series(temp_data_ga_effects)
+        df['dissimilarity'] = pd.Series(temp_data_best_fit)
+        df.to_csv('../results/dataset_audios_violin.csv', index=False)
 
 if __name__ == '__main__':
     dataset_GA_execution_general(df, 
