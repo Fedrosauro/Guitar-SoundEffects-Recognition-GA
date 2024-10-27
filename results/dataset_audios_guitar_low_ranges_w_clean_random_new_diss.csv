@@ -1,0 +1,251 @@
+audio_name,applied_effects,random_effects,similarity_indv
+0.mp3,"{2: {'drive_db': 6.59}, 4: {'depth': 0.32}, 5: {'wet_level': 0.57}, 1: {'delay_seconds': 3.48}}","{0: {'rate_hz': 17.23}, 3: {'gain_db': -7.22}, 2: {'drive_db': 2.85}, 1: {'delay_seconds': 2.24}, 5: {'wet_level': 0.26}, 4: {'depth': 0.52}}",0.5461219316535266
+1.mp3,"{2: {'drive_db': 12.68}, 5: {'wet_level': 0.38}, 4: {'depth': 0.29}, 0: {'rate_hz': 9.49}}","{3: {'gain_db': 3.46}, 0: {'rate_hz': 13.01}, 5: {'wet_level': 0.54}, 4: {'depth': 0.47}, 2: {'drive_db': 4.31}}",0.6302797541583837
+2.mp3,"{0: {'rate_hz': 15.02}, 4: {'depth': 0.36}}",{3: {'gain_db': -5.04}},0.5947212893164343
+3.mp3,"{1: {'delay_seconds': 2.26}, 2: {'drive_db': 14.18}, 5: {'wet_level': 0.38}, 0: {'rate_hz': 4.11}}",{2: {'drive_db': 5.45}},0.6262403599657682
+4.mp3,"{1: {'delay_seconds': 3.99}, 4: {'depth': 0.26}, 3: {'gain_db': 2.76}, 0: {'rate_hz': 2.55}, 5: {'wet_level': 0.54}}","{2: {'drive_db': 1.46}, 5: {'wet_level': 0.5}, 4: {'depth': 0.47}, 0: {'rate_hz': 4.9}, 3: {'gain_db': -8.17}, 1: {'delay_seconds': 4.67}}",0.7221397400237413
+5.mp3,"{2: {'drive_db': 4.27}, 0: {'rate_hz': 6.09}, 3: {'gain_db': -3.47}}","{2: {'drive_db': 2.77}, 1: {'delay_seconds': 1.83}, 4: {'depth': 0.33}}",0.6730434534478116
+6.mp3,"{0: {'rate_hz': 8.77}, 3: {'gain_db': 0.93}, 1: {'delay_seconds': 1.33}, 4: {'depth': 0.41}, 5: {'wet_level': 0.26}, 2: {'drive_db': 18.85}}","{3: {'gain_db': -4.94}, 0: {'rate_hz': 1.04}}",0.4448260074201628
+7.mp3,"{5: {'wet_level': 0.54}, 3: {'gain_db': 1.59}, 0: {'rate_hz': 2.18}, 2: {'drive_db': 6.77}}","{0: {'rate_hz': 1.78}, 1: {'delay_seconds': 4.55}, 3: {'gain_db': 6.03}, 5: {'wet_level': 0.52}, 4: {'depth': 0.23}, 2: {'drive_db': 8.04}}",0.5856990213311994
+8.mp3,"{0: {'rate_hz': 2.45}, 4: {'depth': 0.24}, 5: {'wet_level': 0.3}, 3: {'gain_db': 2.38}}","{0: {'rate_hz': 6.23}, 3: {'gain_db': 8.15}, 2: {'drive_db': 15.45}}",0.5668507762906644
+9.mp3,{3: {'gain_db': 8.18}},"{3: {'gain_db': 2.6}, 1: {'delay_seconds': 1.17}, 4: {'depth': 0.52}, 2: {'drive_db': 17.32}, 0: {'rate_hz': 8.32}}",0.45125596265789036
+10.mp3,"{2: {'drive_db': 6.59}, 0: {'rate_hz': 18.59}}","{1: {'delay_seconds': 3.01}, 5: {'wet_level': 0.46}, 3: {'gain_db': -6.04}, 0: {'rate_hz': 2.47}, 4: {'depth': 0.47}}",0.37267723101940453
+11.mp3,"{5: {'wet_level': 0.3}, 0: {'rate_hz': 4.78}, 4: {'depth': 0.22}, 2: {'drive_db': 18.85}, 3: {'gain_db': -5.75}, 1: {'delay_seconds': 1.46}}",{2: {'drive_db': 12.29}},0.6634563687413759
+12.mp3,"{5: {'wet_level': 0.4}, 3: {'gain_db': -3.81}}",{2: {'drive_db': 18.62}},0.5157487404173249
+13.mp3,"{4: {'depth': 0.37}, 2: {'drive_db': 17.28}, 1: {'delay_seconds': 1.2}, 0: {'rate_hz': 9.86}, 3: {'gain_db': -3.47}}","{1: {'delay_seconds': 1.56}, 0: {'rate_hz': 8.34}, 5: {'wet_level': 0.58}, 3: {'gain_db': 9.01}}",0.3594853342529641
+14.mp3,"{1: {'delay_seconds': 4.19}, 5: {'wet_level': 0.59}, 0: {'rate_hz': 15.15}, 2: {'drive_db': 15.43}, 3: {'gain_db': -1.14}}","{3: {'gain_db': -1.74}, 4: {'depth': 0.53}, 0: {'rate_hz': 14.87}, 2: {'drive_db': 1.94}}",0.30411776951577235
+15.mp3,"{4: {'depth': 0.23}, 1: {'delay_seconds': 2.75}, 3: {'gain_db': -2.59}, 2: {'drive_db': 2.67}, 5: {'wet_level': 0.6}}","{0: {'rate_hz': 14.44}, 5: {'wet_level': 0.33}, 3: {'gain_db': -5.41}, 1: {'delay_seconds': 4.95}}",0.5714303451315363
+16.mp3,"{3: {'gain_db': 0.22}, 1: {'delay_seconds': 2.95}, 2: {'drive_db': 17.73}, 5: {'wet_level': 0.42}, 4: {'depth': 0.22}, 0: {'rate_hz': 12.71}}","{0: {'rate_hz': 17.21}, 4: {'depth': 0.5}}",0.4009026195214201
+17.mp3,"{3: {'gain_db': 3.24}, 4: {'depth': 0.52}, 5: {'wet_level': 0.35}, 2: {'drive_db': 19.54}, 1: {'delay_seconds': 1.2}}","{1: {'delay_seconds': 1.74}, 2: {'drive_db': 10.64}, 0: {'rate_hz': 16.09}, 3: {'gain_db': -9.2}, 4: {'depth': 0.4}}",0.47973227600625684
+18.mp3,"{3: {'gain_db': -1.54}, 1: {'delay_seconds': 1.88}, 5: {'wet_level': 0.44}}","{1: {'delay_seconds': 1.99}, 0: {'rate_hz': 11.33}, 5: {'wet_level': 0.21}, 4: {'depth': 0.56}, 2: {'drive_db': 14.56}, 3: {'gain_db': -3.92}}",0.4397014478043043
+19.mp3,"{5: {'wet_level': 0.52}, 4: {'depth': 0.48}, 3: {'gain_db': 2.58}, 1: {'delay_seconds': 3.55}, 0: {'rate_hz': 19.65}, 2: {'drive_db': 8.38}}",{5: {'wet_level': 0.29}},0.3135170924142339
+20.mp3,"{3: {'gain_db': -2.52}, 5: {'wet_level': 0.39}, 2: {'drive_db': 18.83}, 1: {'delay_seconds': 3.12}, 4: {'depth': 0.34}}","{5: {'wet_level': 0.39}, 1: {'delay_seconds': 1.59}, 4: {'depth': 0.31}, 3: {'gain_db': -3.88}}",0.59437656009545
+21.mp3,"{0: {'rate_hz': 8.56}, 1: {'delay_seconds': 1.93}, 5: {'wet_level': 0.34}, 4: {'depth': 0.2}}","{3: {'gain_db': 0.76}, 2: {'drive_db': 14.94}}",0.48169262301503263
+22.mp3,"{2: {'drive_db': 13.19}, 4: {'depth': 0.2}, 3: {'gain_db': -1.66}, 0: {'rate_hz': 9.73}, 5: {'wet_level': 0.2}, 1: {'delay_seconds': 4.35}}","{0: {'rate_hz': 4.03}, 2: {'drive_db': 9.19}, 3: {'gain_db': 8.08}, 1: {'delay_seconds': 2.07}, 4: {'depth': 0.59}}",0.5718370420990175
+23.mp3,"{3: {'gain_db': -5.9}, 2: {'drive_db': 4.7}, 5: {'wet_level': 0.2}, 1: {'delay_seconds': 2.64}, 0: {'rate_hz': 18.15}}","{2: {'drive_db': 16.4}, 0: {'rate_hz': 14.04}, 1: {'delay_seconds': 4.0}}",0.6807364304342698
+24.mp3,{4: {'depth': 0.42}},"{5: {'wet_level': 0.39}, 3: {'gain_db': -6.55}, 2: {'drive_db': 10.88}, 4: {'depth': 0.49}}",0.6436753911784202
+25.mp3,"{4: {'depth': 0.49}, 5: {'wet_level': 0.54}, 1: {'delay_seconds': 4.04}, 3: {'gain_db': -5.07}, 0: {'rate_hz': 5.52}, 2: {'drive_db': 2.07}}",{3: {'gain_db': 2.59}},0.3723873680838308
+26.mp3,"{4: {'depth': 0.23}, 3: {'gain_db': -7.1}, 5: {'wet_level': 0.44}, 0: {'rate_hz': 14.75}, 2: {'drive_db': 16.59}, 1: {'delay_seconds': 1.92}}","{1: {'delay_seconds': 4.6}, 2: {'drive_db': 18.17}, 5: {'wet_level': 0.28}, 0: {'rate_hz': 3.24}, 4: {'depth': 0.27}, 3: {'gain_db': 6.39}}",0.5612056184734594
+27.mp3,"{2: {'drive_db': 10.69}, 5: {'wet_level': 0.27}, 0: {'rate_hz': 15.17}, 1: {'delay_seconds': 4.56}, 3: {'gain_db': 9.46}, 4: {'depth': 0.3}}",{1: {'delay_seconds': 3.18}},0.37597843253084057
+28.mp3,"{5: {'wet_level': 0.51}, 1: {'delay_seconds': 2.14}, 0: {'rate_hz': 2.76}}","{2: {'drive_db': 14.84}, 5: {'wet_level': 0.25}, 0: {'rate_hz': 2.6}, 3: {'gain_db': -5.97}}",0.5995435879362612
+29.mp3,"{0: {'rate_hz': 9.42}, 2: {'drive_db': 16.52}, 1: {'delay_seconds': 2.9}, 4: {'depth': 0.56}, 5: {'wet_level': 0.36}}",{2: {'drive_db': 19.27}},0.4510224107319875
+30.mp3,{4: {'depth': 0.2}},"{5: {'wet_level': 0.24}, 4: {'depth': 0.38}, 3: {'gain_db': 5.34}, 2: {'drive_db': 12.12}}",0.5517580638390319
+31.mp3,"{3: {'gain_db': -3.51}, 0: {'rate_hz': 11.19}, 2: {'drive_db': 14.63}, 5: {'wet_level': 0.4}, 4: {'depth': 0.42}}","{1: {'delay_seconds': 1.86}, 0: {'rate_hz': 9.11}, 3: {'gain_db': -3.99}}",0.4804949961029498
+32.mp3,"{5: {'wet_level': 0.21}, 2: {'drive_db': 19.19}, 1: {'delay_seconds': 1.34}, 4: {'depth': 0.27}}","{0: {'rate_hz': 9.42}, 5: {'wet_level': 0.21}}",0.5140635758318447
+33.mp3,"{4: {'depth': 0.34}, 3: {'gain_db': -4.02}, 5: {'wet_level': 0.45}, 2: {'drive_db': 5.08}, 0: {'rate_hz': 6.06}, 1: {'delay_seconds': 1.06}}","{5: {'wet_level': 0.21}, 1: {'delay_seconds': 2.93}, 3: {'gain_db': -8.23}, 2: {'drive_db': 5.25}}",0.6447586240523421
+34.mp3,"{0: {'rate_hz': 15.72}, 4: {'depth': 0.47}, 1: {'delay_seconds': 3.52}, 2: {'drive_db': 12.49}, 3: {'gain_db': 0.82}}",{0: {'rate_hz': 6.08}},0.4191626215667717
+35.mp3,"{5: {'wet_level': 0.3}, 4: {'depth': 0.56}}",{0: {'rate_hz': 9.3}},0.527888411652656
+36.mp3,{4: {'depth': 0.45}},{2: {'drive_db': 19.23}},0.5021743528101429
+37.mp3,{4: {'depth': 0.6}},"{3: {'gain_db': -0.07}, 1: {'delay_seconds': 1.77}, 0: {'rate_hz': 5.92}, 2: {'drive_db': 19.15}}",0.37068151941961847
+38.mp3,"{4: {'depth': 0.3}, 1: {'delay_seconds': 2.41}, 5: {'wet_level': 0.52}}","{2: {'drive_db': 12.6}, 4: {'depth': 0.25}, 0: {'rate_hz': 12.13}, 3: {'gain_db': -8.51}, 5: {'wet_level': 0.58}}",0.587778185834284
+39.mp3,"{4: {'depth': 0.56}, 1: {'delay_seconds': 3.09}, 3: {'gain_db': 5.86}, 2: {'drive_db': 13.8}, 5: {'wet_level': 0.41}}",{0: {'rate_hz': 15.76}},0.2421661840531311
+40.mp3,"{1: {'delay_seconds': 1.32}, 5: {'wet_level': 0.32}, 3: {'gain_db': 6.02}, 0: {'rate_hz': 14.36}, 4: {'depth': 0.38}}","{5: {'wet_level': 0.38}, 1: {'delay_seconds': 3.67}}",0.45393283210592866
+41.mp3,"{3: {'gain_db': -0.16}, 4: {'depth': 0.43}, 1: {'delay_seconds': 1.55}, 5: {'wet_level': 0.41}}",{4: {'depth': 0.49}},0.6314197408875409
+42.mp3,"{2: {'drive_db': 17.01}, 5: {'wet_level': 0.27}, 1: {'delay_seconds': 2.41}, 0: {'rate_hz': 17.98}, 3: {'gain_db': -7.26}}","{4: {'depth': 0.49}, 3: {'gain_db': -9.35}, 1: {'delay_seconds': 4.5}, 5: {'wet_level': 0.56}, 0: {'rate_hz': 19.87}}",0.449472933521043
+43.mp3,"{3: {'gain_db': 8.76}, 2: {'drive_db': 1.74}, 5: {'wet_level': 0.53}, 0: {'rate_hz': 8.18}}","{4: {'depth': 0.3}, 2: {'drive_db': 14.95}, 1: {'delay_seconds': 4.86}, 0: {'rate_hz': 3.58}}",0.2534450201338397
+44.mp3,"{5: {'wet_level': 0.34}, 2: {'drive_db': 4.18}, 3: {'gain_db': 9.74}, 4: {'depth': 0.42}}","{1: {'delay_seconds': 2.07}, 0: {'rate_hz': 5.6}, 5: {'wet_level': 0.55}, 4: {'depth': 0.45}, 3: {'gain_db': 5.56}, 2: {'drive_db': 9.22}}",0.7165742307646203
+45.mp3,"{2: {'drive_db': 13.45}, 5: {'wet_level': 0.23}, 3: {'gain_db': 5.67}, 0: {'rate_hz': 14.64}, 4: {'depth': 0.47}, 1: {'delay_seconds': 4.91}}","{3: {'gain_db': 1.94}, 0: {'rate_hz': 11.02}, 1: {'delay_seconds': 1.97}}",0.47940754014367504
+46.mp3,"{4: {'depth': 0.45}, 1: {'delay_seconds': 1.1}, 5: {'wet_level': 0.43}, 2: {'drive_db': 14.28}, 3: {'gain_db': -1.52}}","{5: {'wet_level': 0.21}, 4: {'depth': 0.56}}",0.6114069061439812
+47.mp3,"{4: {'depth': 0.59}, 1: {'delay_seconds': 2.22}, 0: {'rate_hz': 15.89}}","{1: {'delay_seconds': 1.78}, 2: {'drive_db': 9.11}, 0: {'rate_hz': 18.24}, 5: {'wet_level': 0.22}, 4: {'depth': 0.4}}",0.7219853954009423
+48.mp3,"{4: {'depth': 0.42}, 2: {'drive_db': 15.25}, 0: {'rate_hz': 5.63}}","{4: {'depth': 0.39}, 2: {'drive_db': 13.56}, 5: {'wet_level': 0.5}, 0: {'rate_hz': 15.69}, 3: {'gain_db': -5.14}, 1: {'delay_seconds': 1.81}}",0.5627383135839508
+49.mp3,"{0: {'rate_hz': 15.03}, 2: {'drive_db': 12.29}, 3: {'gain_db': 4.03}, 1: {'delay_seconds': 1.67}}","{3: {'gain_db': 9.22}, 5: {'wet_level': 0.34}, 2: {'drive_db': 8.62}, 0: {'rate_hz': 12.31}, 1: {'delay_seconds': 1.41}, 4: {'depth': 0.28}}",0.6680609019491455
+50.mp3,{4: {'depth': 0.27}},"{4: {'depth': 0.41}, 0: {'rate_hz': 4.29}, 2: {'drive_db': 6.94}, 3: {'gain_db': -0.94}}",0.7335190142979414
+51.mp3,"{2: {'drive_db': 19.01}, 0: {'rate_hz': 17.17}, 4: {'depth': 0.59}}","{2: {'drive_db': 3.42}, 0: {'rate_hz': 1.87}, 3: {'gain_db': -8.72}}",0.3994605627098743
+52.mp3,{2: {'drive_db': 8.28}},"{3: {'gain_db': 6.84}, 0: {'rate_hz': 4.55}, 2: {'drive_db': 5.96}}",0.6407934090248343
+53.mp3,"{0: {'rate_hz': 4.87}, 3: {'gain_db': 0.8}}","{3: {'gain_db': -5.53}, 4: {'depth': 0.3}, 0: {'rate_hz': 18.94}, 5: {'wet_level': 0.26}}",0.5850979477479499
+54.mp3,"{3: {'gain_db': -9.37}, 5: {'wet_level': 0.42}, 1: {'delay_seconds': 4.06}, 2: {'drive_db': 13.02}, 0: {'rate_hz': 19.81}, 4: {'depth': 0.49}}","{4: {'depth': 0.25}, 0: {'rate_hz': 17.21}, 3: {'gain_db': 8.85}}",0.3442604683768613
+55.mp3,"{4: {'depth': 0.36}, 1: {'delay_seconds': 2.32}, 5: {'wet_level': 0.29}, 3: {'gain_db': 5.4}}","{1: {'delay_seconds': 3.52}, 0: {'rate_hz': 19.34}, 5: {'wet_level': 0.45}, 3: {'gain_db': -6.94}, 2: {'drive_db': 15.77}, 4: {'depth': 0.5}}",0.405488182686058
+56.mp3,"{0: {'rate_hz': 6.85}, 3: {'gain_db': 9.2}, 5: {'wet_level': 0.26}}","{2: {'drive_db': 8.58}, 4: {'depth': 0.48}, 0: {'rate_hz': 3.89}, 1: {'delay_seconds': 3.53}}",0.3605003547332521
+57.mp3,"{0: {'rate_hz': 10.03}, 1: {'delay_seconds': 4.7}, 3: {'gain_db': -2.96}, 5: {'wet_level': 0.34}, 2: {'drive_db': 4.76}}","{2: {'drive_db': 1.3}, 0: {'rate_hz': 14.87}, 1: {'delay_seconds': 4.42}, 4: {'depth': 0.29}, 3: {'gain_db': 8.89}, 5: {'wet_level': 0.54}}",0.6377368653813864
+58.mp3,"{0: {'rate_hz': 3.62}, 4: {'depth': 0.29}, 3: {'gain_db': -8.61}}","{1: {'delay_seconds': 3.58}, 0: {'rate_hz': 1.3}, 2: {'drive_db': 5.47}}",0.6259778056694337
+59.mp3,"{0: {'rate_hz': 4.8}, 2: {'drive_db': 19.9}, 4: {'depth': 0.55}, 3: {'gain_db': 6.15}, 1: {'delay_seconds': 2.33}}","{4: {'depth': 0.39}, 0: {'rate_hz': 6.44}}",0.4318051447623637
+60.mp3,{1: {'delay_seconds': 4.76}},{5: {'wet_level': 0.49}},0.4879374314851025
+61.mp3,"{1: {'delay_seconds': 2.43}, 5: {'wet_level': 0.45}, 4: {'depth': 0.54}, 2: {'drive_db': 3.81}}","{4: {'depth': 0.56}, 3: {'gain_db': -0.85}, 2: {'drive_db': 13.14}}",0.5478319613404932
+62.mp3,{4: {'depth': 0.38}},{3: {'gain_db': -7.86}},0.7377786840881952
+63.mp3,"{2: {'drive_db': 16.31}, 5: {'wet_level': 0.27}, 0: {'rate_hz': 15.64}, 1: {'delay_seconds': 1.13}}","{3: {'gain_db': -0.21}, 5: {'wet_level': 0.3}, 0: {'rate_hz': 13.57}, 2: {'drive_db': 9.7}, 1: {'delay_seconds': 1.48}}",0.7526969638951704
+64.mp3,"{1: {'delay_seconds': 1.94}, 2: {'drive_db': 9.36}}","{4: {'depth': 0.49}, 1: {'delay_seconds': 4.6}}",0.5586021363054936
+65.mp3,"{5: {'wet_level': 0.57}, 0: {'rate_hz': 2.4}, 1: {'delay_seconds': 2.05}}","{2: {'drive_db': 16.42}, 0: {'rate_hz': 16.69}, 3: {'gain_db': 1.89}, 4: {'depth': 0.46}, 1: {'delay_seconds': 1.91}}",0.2894786799143207
+66.mp3,"{4: {'depth': 0.24}, 5: {'wet_level': 0.33}, 2: {'drive_db': 15.73}, 0: {'rate_hz': 12.96}}","{4: {'depth': 0.28}, 2: {'drive_db': 13.83}, 1: {'delay_seconds': 1.84}, 3: {'gain_db': 3.62}, 0: {'rate_hz': 9.91}, 5: {'wet_level': 0.54}}",0.6444697166099524
+67.mp3,"{5: {'wet_level': 0.37}, 1: {'delay_seconds': 3.23}, 3: {'gain_db': -9.36}, 0: {'rate_hz': 12.81}, 4: {'depth': 0.54}, 2: {'drive_db': 7.87}}","{3: {'gain_db': -5.57}, 4: {'depth': 0.29}, 2: {'drive_db': 1.73}}",0.4980696613923254
+68.mp3,"{0: {'rate_hz': 15.96}, 3: {'gain_db': -5.04}, 5: {'wet_level': 0.48}, 4: {'depth': 0.25}}",{2: {'drive_db': 14.3}},0.41931877489866665
+69.mp3,"{5: {'wet_level': 0.43}, 3: {'gain_db': 7.14}}","{5: {'wet_level': 0.31}, 3: {'gain_db': 2.08}, 4: {'depth': 0.22}, 1: {'delay_seconds': 1.03}}",0.7836324714579209
+70.mp3,"{5: {'wet_level': 0.35}, 2: {'drive_db': 16.49}}","{3: {'gain_db': 6.47}, 5: {'wet_level': 0.43}, 0: {'rate_hz': 10.1}}",0.47866273268037296
+71.mp3,"{5: {'wet_level': 0.34}, 2: {'drive_db': 18.33}, 1: {'delay_seconds': 2.13}}",{3: {'gain_db': 0.85}},0.4776869375698276
+72.mp3,"{1: {'delay_seconds': 2.45}, 0: {'rate_hz': 14.87}, 5: {'wet_level': 0.44}, 4: {'depth': 0.31}, 3: {'gain_db': -4.31}, 2: {'drive_db': 12.33}}",{5: {'wet_level': 0.21}},0.4727755634632614
+73.mp3,"{0: {'rate_hz': 10.03}, 4: {'depth': 0.32}, 3: {'gain_db': -4.97}, 2: {'drive_db': 19.54}}","{1: {'delay_seconds': 3.79}, 4: {'depth': 0.26}, 0: {'rate_hz': 19.36}}",0.449247862767046
+74.mp3,"{4: {'depth': 0.56}, 1: {'delay_seconds': 1.6}, 5: {'wet_level': 0.58}, 3: {'gain_db': -7.95}, 2: {'drive_db': 9.58}}","{2: {'drive_db': 3.92}, 5: {'wet_level': 0.42}, 3: {'gain_db': 2.8}, 1: {'delay_seconds': 1.9}, 4: {'depth': 0.46}}",0.7196775253126948
+75.mp3,"{3: {'gain_db': -0.93}, 2: {'drive_db': 2.17}, 5: {'wet_level': 0.4}, 0: {'rate_hz': 10.53}, 4: {'depth': 0.49}}",{4: {'depth': 0.52}},0.6038558354915801
+76.mp3,{5: {'wet_level': 0.25}},{3: {'gain_db': -6.94}},0.8187910455159978
+77.mp3,"{5: {'wet_level': 0.54}, 1: {'delay_seconds': 4.15}, 4: {'depth': 0.3}, 2: {'drive_db': 13.44}, 0: {'rate_hz': 4.69}}","{2: {'drive_db': 8.65}, 3: {'gain_db': -8.56}, 0: {'rate_hz': 15.84}}",0.4052660959162772
+78.mp3,"{0: {'rate_hz': 15.26}, 2: {'drive_db': 8.16}, 4: {'depth': 0.43}}","{1: {'delay_seconds': 2.62}, 3: {'gain_db': -3.06}, 4: {'depth': 0.52}, 0: {'rate_hz': 19.48}, 2: {'drive_db': 17.36}, 5: {'wet_level': 0.32}}",0.6004063638218521
+79.mp3,"{3: {'gain_db': 3.57}, 5: {'wet_level': 0.46}, 0: {'rate_hz': 17.99}, 2: {'drive_db': 8.53}}","{0: {'rate_hz': 4.25}, 3: {'gain_db': 4.12}, 2: {'drive_db': 7.88}, 5: {'wet_level': 0.52}}",0.7160453381259606
+80.mp3,"{0: {'rate_hz': 5.89}, 5: {'wet_level': 0.35}, 1: {'delay_seconds': 4.19}, 2: {'drive_db': 4.85}, 3: {'gain_db': -9.71}, 4: {'depth': 0.39}}","{3: {'gain_db': 8.0}, 1: {'delay_seconds': 2.28}, 0: {'rate_hz': 5.13}}",0.4594659619447667
+81.mp3,"{0: {'rate_hz': 5.65}, 4: {'depth': 0.56}, 3: {'gain_db': -1.27}, 5: {'wet_level': 0.53}, 2: {'drive_db': 14.06}}","{3: {'gain_db': -5.61}, 1: {'delay_seconds': 2.44}}",0.3531309845508533
+82.mp3,"{2: {'drive_db': 8.46}, 4: {'depth': 0.26}, 3: {'gain_db': -5.38}, 0: {'rate_hz': 15.74}, 5: {'wet_level': 0.44}}",{3: {'gain_db': 7.59}},0.4307306136289609
+83.mp3,"{4: {'depth': 0.42}, 1: {'delay_seconds': 3.33}}","{4: {'depth': 0.4}, 1: {'delay_seconds': 4.55}}",0.899462186955097
+84.mp3,"{0: {'rate_hz': 2.21}, 1: {'delay_seconds': 4.3}, 5: {'wet_level': 0.38}, 3: {'gain_db': -9.53}, 4: {'depth': 0.23}, 2: {'drive_db': 7.82}}","{2: {'drive_db': 8.46}, 4: {'depth': 0.52}, 5: {'wet_level': 0.24}, 1: {'delay_seconds': 4.14}}",0.7753276253610027
+85.mp3,"{3: {'gain_db': -7.43}, 5: {'wet_level': 0.34}, 0: {'rate_hz': 1.44}, 2: {'drive_db': 8.55}, 1: {'delay_seconds': 1.12}}","{2: {'drive_db': 19.19}, 0: {'rate_hz': 7.33}, 5: {'wet_level': 0.57}}",0.6881808899258941
+86.mp3,"{3: {'gain_db': -1.32}, 1: {'delay_seconds': 3.44}, 5: {'wet_level': 0.33}}",{2: {'drive_db': 15.81}},0.48536578524159507
+87.mp3,"{4: {'depth': 0.24}, 5: {'wet_level': 0.32}, 1: {'delay_seconds': 4.67}, 3: {'gain_db': 1.24}}","{1: {'delay_seconds': 4.56}, 2: {'drive_db': 3.34}, 5: {'wet_level': 0.25}, 3: {'gain_db': -9.23}, 0: {'rate_hz': 3.1}, 4: {'depth': 0.43}}",0.7290943771689457
+88.mp3,"{4: {'depth': 0.3}, 0: {'rate_hz': 11.73}, 5: {'wet_level': 0.25}, 1: {'delay_seconds': 3.87}, 2: {'drive_db': 12.76}, 3: {'gain_db': 6.84}}","{5: {'wet_level': 0.44}, 0: {'rate_hz': 10.79}, 2: {'drive_db': 2.1}, 3: {'gain_db': 6.05}, 1: {'delay_seconds': 4.95}}",0.6621657142479028
+89.mp3,"{4: {'depth': 0.35}, 5: {'wet_level': 0.23}}","{1: {'delay_seconds': 4.39}, 0: {'rate_hz': 1.92}, 5: {'wet_level': 0.6}, 2: {'drive_db': 11.82}}",0.44473181321161637
+90.mp3,"{2: {'drive_db': 19.21}, 4: {'depth': 0.39}}",{4: {'depth': 0.58}},0.5871162335116218
+91.mp3,"{3: {'gain_db': -2.2}, 2: {'drive_db': 3.59}, 0: {'rate_hz': 1.5}, 4: {'depth': 0.36}, 1: {'delay_seconds': 3.77}}","{4: {'depth': 0.36}, 0: {'rate_hz': 19.33}, 3: {'gain_db': 4.59}, 2: {'drive_db': 4.98}, 5: {'wet_level': 0.4}}",0.4331632812345862
+92.mp3,"{1: {'delay_seconds': 3.88}, 5: {'wet_level': 0.24}, 2: {'drive_db': 14.0}, 3: {'gain_db': -4.57}}","{2: {'drive_db': 3.87}, 0: {'rate_hz': 2.49}, 4: {'depth': 0.41}, 1: {'delay_seconds': 4.06}, 5: {'wet_level': 0.33}}",0.6266156594864473
+93.mp3,{5: {'wet_level': 0.51}},"{0: {'rate_hz': 12.64}, 3: {'gain_db': -1.33}, 5: {'wet_level': 0.6}, 1: {'delay_seconds': 2.47}}",0.6227551082740372
+94.mp3,"{1: {'delay_seconds': 3.46}, 5: {'wet_level': 0.47}, 3: {'gain_db': 9.41}, 2: {'drive_db': 8.08}, 0: {'rate_hz': 17.24}, 4: {'depth': 0.43}}","{2: {'drive_db': 10.04}, 3: {'gain_db': -7.55}, 4: {'depth': 0.21}, 5: {'wet_level': 0.23}, 1: {'delay_seconds': 2.48}, 0: {'rate_hz': 18.94}}",0.5779428465945154
+95.mp3,"{5: {'wet_level': 0.32}, 0: {'rate_hz': 7.55}, 2: {'drive_db': 3.87}, 1: {'delay_seconds': 1.04}, 3: {'gain_db': -8.8}, 4: {'depth': 0.34}}","{5: {'wet_level': 0.22}, 4: {'depth': 0.56}, 0: {'rate_hz': 13.46}, 1: {'delay_seconds': 3.96}}",0.6755412912192005
+96.mp3,"{0: {'rate_hz': 13.41}, 3: {'gain_db': -4.64}, 1: {'delay_seconds': 4.76}, 5: {'wet_level': 0.54}, 4: {'depth': 0.44}, 2: {'drive_db': 3.01}}","{5: {'wet_level': 0.28}, 2: {'drive_db': 1.39}}",0.40002572200196834
+97.mp3,"{2: {'drive_db': 18.62}, 1: {'delay_seconds': 2.35}, 3: {'gain_db': 6.32}, 5: {'wet_level': 0.53}}","{3: {'gain_db': -0.47}, 4: {'depth': 0.32}, 0: {'rate_hz': 2.54}, 1: {'delay_seconds': 2.65}, 5: {'wet_level': 0.27}, 2: {'drive_db': 18.45}}",0.6818585947983135
+98.mp3,"{4: {'depth': 0.44}, 2: {'drive_db': 8.71}, 1: {'delay_seconds': 3.75}, 0: {'rate_hz': 5.72}, 3: {'gain_db': -8.71}, 5: {'wet_level': 0.21}}","{3: {'gain_db': -9.81}, 0: {'rate_hz': 10.94}, 4: {'depth': 0.55}, 2: {'drive_db': 11.77}}",0.6318591503443483
+99.mp3,"{0: {'rate_hz': 8.55}, 4: {'depth': 0.21}, 1: {'delay_seconds': 3.15}, 2: {'drive_db': 14.75}, 5: {'wet_level': 0.42}}",{1: {'delay_seconds': 1.26}},0.5030012575468625
+100.mp3,"{3: {'gain_db': -5.71}, 5: {'wet_level': 0.49}, 0: {'rate_hz': 16.87}}","{0: {'rate_hz': 11.07}, 3: {'gain_db': -7.06}, 2: {'drive_db': 9.4}}",0.5965770014727212
+101.mp3,"{5: {'wet_level': 0.55}, 3: {'gain_db': 8.13}}","{2: {'drive_db': 9.16}, 1: {'delay_seconds': 1.84}, 0: {'rate_hz': 2.96}}",0.41846295220083957
+102.mp3,"{4: {'depth': 0.49}, 2: {'drive_db': 14.36}, 1: {'delay_seconds': 2.5}, 3: {'gain_db': 3.35}, 5: {'wet_level': 0.38}, 0: {'rate_hz': 15.23}}","{0: {'rate_hz': 19.91}, 1: {'delay_seconds': 2.81}}",0.4101220739910734
+103.mp3,"{4: {'depth': 0.37}, 5: {'wet_level': 0.6}, 1: {'delay_seconds': 3.88}, 0: {'rate_hz': 16.78}}","{4: {'depth': 0.5}, 1: {'delay_seconds': 1.54}, 2: {'drive_db': 14.56}, 0: {'rate_hz': 11.0}, 5: {'wet_level': 0.29}}",0.5628848571049635
+104.mp3,"{4: {'depth': 0.24}, 3: {'gain_db': 8.96}, 0: {'rate_hz': 6.1}, 5: {'wet_level': 0.58}}","{1: {'delay_seconds': 4.59}, 5: {'wet_level': 0.38}, 3: {'gain_db': 5.74}, 2: {'drive_db': 17.24}, 0: {'rate_hz': 7.58}, 4: {'depth': 0.52}}",0.43048940763598187
+105.mp3,{0: {'rate_hz': 2.47}},{4: {'depth': 0.3}},0.7897413299449144
+106.mp3,"{0: {'rate_hz': 6.42}, 1: {'delay_seconds': 4.62}, 4: {'depth': 0.51}}","{4: {'depth': 0.26}, 0: {'rate_hz': 4.0}, 1: {'delay_seconds': 4.98}, 5: {'wet_level': 0.36}, 2: {'drive_db': 9.73}}",0.6371138008706881
+107.mp3,"{4: {'depth': 0.4}, 1: {'delay_seconds': 1.04}, 2: {'drive_db': 15.85}, 0: {'rate_hz': 9.33}}","{1: {'delay_seconds': 4.65}, 4: {'depth': 0.24}, 2: {'drive_db': 13.53}}",0.6295333210865177
+108.mp3,"{1: {'delay_seconds': 4.65}, 2: {'drive_db': 16.74}, 4: {'depth': 0.35}, 0: {'rate_hz': 14.31}}",{2: {'drive_db': 10.46}},0.4498918246111682
+109.mp3,"{1: {'delay_seconds': 2.09}, 3: {'gain_db': 2.14}, 4: {'depth': 0.35}, 2: {'drive_db': 15.74}, 0: {'rate_hz': 14.87}}","{4: {'depth': 0.23}, 0: {'rate_hz': 13.29}, 3: {'gain_db': -1.25}, 1: {'delay_seconds': 1.11}}",0.6505346345248693
+110.mp3,"{2: {'drive_db': 14.88}, 4: {'depth': 0.35}}","{5: {'wet_level': 0.44}, 1: {'delay_seconds': 4.78}, 4: {'depth': 0.28}, 3: {'gain_db': -8.93}}",0.41952273388057515
+111.mp3,"{0: {'rate_hz': 19.35}, 5: {'wet_level': 0.21}}","{3: {'gain_db': 5.29}, 5: {'wet_level': 0.23}, 1: {'delay_seconds': 1.53}}",0.4811449124737699
+112.mp3,"{4: {'depth': 0.58}, 2: {'drive_db': 13.77}}",{4: {'depth': 0.27}},0.6485798586581287
+113.mp3,"{2: {'drive_db': 13.77}, 4: {'depth': 0.37}, 0: {'rate_hz': 16.54}, 1: {'delay_seconds': 2.92}, 5: {'wet_level': 0.58}}","{2: {'drive_db': 12.85}, 5: {'wet_level': 0.5}}",0.5126335130596353
+114.mp3,"{3: {'gain_db': 5.33}, 5: {'wet_level': 0.36}, 1: {'delay_seconds': 3.68}, 2: {'drive_db': 1.46}, 0: {'rate_hz': 12.05}}",{4: {'depth': 0.34}},0.39741326888279516
+115.mp3,"{4: {'depth': 0.49}, 5: {'wet_level': 0.52}}","{3: {'gain_db': -4.97}, 5: {'wet_level': 0.35}}",0.6324689418515712
+116.mp3,"{3: {'gain_db': -6.71}, 4: {'depth': 0.59}, 5: {'wet_level': 0.28}}","{2: {'drive_db': 5.86}, 4: {'depth': 0.43}, 0: {'rate_hz': 7.99}, 1: {'delay_seconds': 2.21}, 3: {'gain_db': 9.89}}",0.5137555246434004
+117.mp3,{2: {'drive_db': 19.82}},"{0: {'rate_hz': 3.75}, 3: {'gain_db': 8.17}, 1: {'delay_seconds': 3.18}, 5: {'wet_level': 0.39}, 2: {'drive_db': 18.62}}",0.4691006843728903
+118.mp3,"{3: {'gain_db': -7.43}, 2: {'drive_db': 2.34}, 4: {'depth': 0.22}, 1: {'delay_seconds': 2.77}}","{2: {'drive_db': 11.21}, 5: {'wet_level': 0.3}, 1: {'delay_seconds': 3.61}, 4: {'depth': 0.48}, 3: {'gain_db': 9.46}}",0.5211342780803477
+119.mp3,"{4: {'depth': 0.6}, 1: {'delay_seconds': 1.34}, 2: {'drive_db': 9.83}, 3: {'gain_db': -6.25}, 5: {'wet_level': 0.49}}","{5: {'wet_level': 0.22}, 1: {'delay_seconds': 3.21}, 0: {'rate_hz': 16.54}, 4: {'depth': 0.24}, 2: {'drive_db': 6.18}, 3: {'gain_db': -9.33}}",0.5095364012827591
+120.mp3,"{2: {'drive_db': 19.32}, 3: {'gain_db': 8.5}, 4: {'depth': 0.21}}",{4: {'depth': 0.3}},0.45056377379474993
+121.mp3,"{1: {'delay_seconds': 2.37}, 4: {'depth': 0.27}, 0: {'rate_hz': 3.7}, 5: {'wet_level': 0.49}}",{5: {'wet_level': 0.43}},0.7197022416548192
+122.mp3,"{2: {'drive_db': 17.21}, 3: {'gain_db': -7.86}, 5: {'wet_level': 0.47}, 1: {'delay_seconds': 4.31}}","{5: {'wet_level': 0.44}, 2: {'drive_db': 5.83}, 4: {'depth': 0.33}}",0.5198517590021459
+123.mp3,{4: {'depth': 0.31}},"{4: {'depth': 0.5}, 0: {'rate_hz': 3.86}, 5: {'wet_level': 0.58}}",0.5773158740023818
+124.mp3,{0: {'rate_hz': 9.95}},"{2: {'drive_db': 16.28}, 1: {'delay_seconds': 1.31}, 0: {'rate_hz': 10.63}, 5: {'wet_level': 0.38}}",0.5653531872291574
+125.mp3,"{5: {'wet_level': 0.51}, 2: {'drive_db': 4.42}}",{2: {'drive_db': 19.57}},0.5351870896084461
+126.mp3,"{2: {'drive_db': 12.5}, 3: {'gain_db': 4.58}, 1: {'delay_seconds': 3.39}, 5: {'wet_level': 0.33}, 0: {'rate_hz': 19.83}, 4: {'depth': 0.44}}","{2: {'drive_db': 11.19}, 0: {'rate_hz': 5.6}, 1: {'delay_seconds': 2.55}, 3: {'gain_db': 9.01}}",0.5121327831301878
+127.mp3,{2: {'drive_db': 1.77}},"{0: {'rate_hz': 9.39}, 2: {'drive_db': 4.12}, 5: {'wet_level': 0.26}, 3: {'gain_db': -9.95}, 4: {'depth': 0.21}}",0.6987469148767165
+128.mp3,"{1: {'delay_seconds': 1.17}, 0: {'rate_hz': 11.61}}","{5: {'wet_level': 0.33}, 3: {'gain_db': -8.25}, 4: {'depth': 0.46}, 2: {'drive_db': 6.88}, 1: {'delay_seconds': 2.41}}",0.5144154248437975
+129.mp3,"{3: {'gain_db': 9.13}, 4: {'depth': 0.34}}","{2: {'drive_db': 9.84}, 1: {'delay_seconds': 4.73}, 4: {'depth': 0.44}, 0: {'rate_hz': 5.38}, 5: {'wet_level': 0.22}, 3: {'gain_db': -3.82}}",0.4536760008593461
+130.mp3,"{4: {'depth': 0.35}, 0: {'rate_hz': 1.56}, 2: {'drive_db': 6.13}, 5: {'wet_level': 0.24}}","{0: {'rate_hz': 2.25}, 2: {'drive_db': 7.47}, 3: {'gain_db': -3.35}, 4: {'depth': 0.5}, 5: {'wet_level': 0.22}}",0.8268687342355945
+131.mp3,"{0: {'rate_hz': 12.68}, 4: {'depth': 0.31}}","{5: {'wet_level': 0.45}, 3: {'gain_db': 0.0}, 4: {'depth': 0.24}, 1: {'delay_seconds': 1.26}, 0: {'rate_hz': 7.97}, 2: {'drive_db': 2.97}}",0.5985178270642827
+132.mp3,"{2: {'drive_db': 16.94}, 4: {'depth': 0.35}}","{2: {'drive_db': 7.0}, 3: {'gain_db': -3.35}, 5: {'wet_level': 0.37}, 0: {'rate_hz': 7.46}}",0.5495835620310991
+133.mp3,{5: {'wet_level': 0.49}},"{3: {'gain_db': -4.71}, 4: {'depth': 0.53}, 1: {'delay_seconds': 4.17}, 2: {'drive_db': 7.06}, 5: {'wet_level': 0.37}, 0: {'rate_hz': 18.06}}",0.35117901444520433
+134.mp3,"{1: {'delay_seconds': 3.06}, 3: {'gain_db': 4.15}, 4: {'depth': 0.57}}",{0: {'rate_hz': 18.28}},0.3400762354635195
+135.mp3,"{5: {'wet_level': 0.22}, 3: {'gain_db': -6.31}, 0: {'rate_hz': 15.1}}","{5: {'wet_level': 0.57}, 4: {'depth': 0.53}, 3: {'gain_db': 0.09}, 1: {'delay_seconds': 4.57}}",0.33813690293289556
+136.mp3,"{4: {'depth': 0.48}, 0: {'rate_hz': 7.26}, 1: {'delay_seconds': 2.14}, 3: {'gain_db': -4.24}, 5: {'wet_level': 0.46}}","{0: {'rate_hz': 6.55}, 3: {'gain_db': 1.16}, 2: {'drive_db': 10.79}, 4: {'depth': 0.45}, 1: {'delay_seconds': 2.73}, 5: {'wet_level': 0.47}}",0.7477031253404771
+137.mp3,"{1: {'delay_seconds': 4.71}, 4: {'depth': 0.36}, 3: {'gain_db': -1.39}, 2: {'drive_db': 8.54}}","{4: {'depth': 0.57}, 3: {'gain_db': 8.48}, 0: {'rate_hz': 2.49}, 5: {'wet_level': 0.2}, 1: {'delay_seconds': 4.21}}",0.6621187064685017
+138.mp3,{3: {'gain_db': 5.09}},"{3: {'gain_db': 3.2}, 0: {'rate_hz': 8.37}}",0.824846495895743
+139.mp3,{4: {'depth': 0.38}},"{4: {'depth': 0.21}, 0: {'rate_hz': 1.18}, 3: {'gain_db': -5.66}, 1: {'delay_seconds': 4.57}}",0.5987013211713379
+140.mp3,"{5: {'wet_level': 0.45}, 3: {'gain_db': -4.06}, 4: {'depth': 0.25}, 2: {'drive_db': 4.56}, 0: {'rate_hz': 18.91}}","{0: {'rate_hz': 12.89}, 4: {'depth': 0.52}, 2: {'drive_db': 10.7}}",0.584055492483272
+141.mp3,"{3: {'gain_db': 5.21}, 5: {'wet_level': 0.3}, 2: {'drive_db': 4.91}, 4: {'depth': 0.44}, 1: {'delay_seconds': 4.04}}","{2: {'drive_db': 5.62}, 5: {'wet_level': 0.33}, 1: {'delay_seconds': 3.03}, 3: {'gain_db': 2.56}, 4: {'depth': 0.5}, 0: {'rate_hz': 5.68}}",0.84042948267302
+142.mp3,"{3: {'gain_db': -4.81}, 2: {'drive_db': 1.29}, 5: {'wet_level': 0.44}}","{5: {'wet_level': 0.57}, 2: {'drive_db': 5.92}, 0: {'rate_hz': 4.69}}",0.8072708314566593
+143.mp3,"{3: {'gain_db': -4.7}, 4: {'depth': 0.26}, 2: {'drive_db': 17.52}, 5: {'wet_level': 0.53}, 1: {'delay_seconds': 4.7}}","{0: {'rate_hz': 12.32}, 2: {'drive_db': 16.47}, 3: {'gain_db': -7.99}, 5: {'wet_level': 0.49}, 1: {'delay_seconds': 2.69}}",0.6433725748482453
+144.mp3,"{1: {'delay_seconds': 3.92}, 3: {'gain_db': -7.22}, 5: {'wet_level': 0.28}, 0: {'rate_hz': 13.06}, 2: {'drive_db': 15.16}}","{2: {'drive_db': 15.3}, 4: {'depth': 0.47}, 1: {'delay_seconds': 3.06}, 0: {'rate_hz': 14.38}, 3: {'gain_db': 3.12}, 5: {'wet_level': 0.46}}",0.5907549407524649
+145.mp3,"{5: {'wet_level': 0.49}, 3: {'gain_db': 4.34}, 2: {'drive_db': 19.85}, 0: {'rate_hz': 6.41}}","{2: {'drive_db': 4.46}, 0: {'rate_hz': 9.22}, 5: {'wet_level': 0.36}}",0.5578642847035079
+146.mp3,"{5: {'wet_level': 0.38}, 0: {'rate_hz': 6.69}}","{1: {'delay_seconds': 2.36}, 2: {'drive_db': 10.36}}",0.59091374969918
+147.mp3,"{3: {'gain_db': -0.38}, 2: {'drive_db': 18.0}, 4: {'depth': 0.33}}","{3: {'gain_db': 5.59}, 1: {'delay_seconds': 2.08}, 2: {'drive_db': 4.63}, 0: {'rate_hz': 1.86}, 5: {'wet_level': 0.49}, 4: {'depth': 0.42}}",0.5157232291955964
+148.mp3,"{1: {'delay_seconds': 2.72}, 2: {'drive_db': 17.3}, 5: {'wet_level': 0.35}}","{2: {'drive_db': 8.6}, 5: {'wet_level': 0.58}, 1: {'delay_seconds': 3.38}, 3: {'gain_db': 8.79}}",0.5460811940364142
+149.mp3,"{1: {'delay_seconds': 3.86}, 5: {'wet_level': 0.52}}","{4: {'depth': 0.35}, 1: {'delay_seconds': 4.72}, 3: {'gain_db': 0.61}, 0: {'rate_hz': 7.69}}",0.49169507365347304
+150.mp3,{3: {'gain_db': -8.81}},"{4: {'depth': 0.33}, 5: {'wet_level': 0.25}, 2: {'drive_db': 11.51}, 3: {'gain_db': 1.67}}",0.575365380373685
+151.mp3,{4: {'depth': 0.43}},"{3: {'gain_db': -1.47}, 5: {'wet_level': 0.44}, 1: {'delay_seconds': 3.53}, 2: {'drive_db': 10.95}, 0: {'rate_hz': 5.04}}",0.40909851513571666
+152.mp3,"{3: {'gain_db': 9.47}, 5: {'wet_level': 0.3}}",{5: {'wet_level': 0.51}},0.5776647757211498
+153.mp3,"{5: {'wet_level': 0.36}, 0: {'rate_hz': 18.67}}","{4: {'depth': 0.36}, 2: {'drive_db': 5.82}, 5: {'wet_level': 0.38}, 1: {'delay_seconds': 2.14}, 0: {'rate_hz': 11.01}}",0.6404481699135457
+154.mp3,"{1: {'delay_seconds': 1.5}, 3: {'gain_db': 0.23}, 2: {'drive_db': 5.08}, 5: {'wet_level': 0.31}}","{0: {'rate_hz': 18.74}, 4: {'depth': 0.49}, 1: {'delay_seconds': 2.19}}",0.4004098429081065
+155.mp3,{0: {'rate_hz': 18.72}},"{0: {'rate_hz': 2.31}, 3: {'gain_db': 4.58}, 5: {'wet_level': 0.5}}",0.43740101693947153
+156.mp3,"{0: {'rate_hz': 16.28}, 4: {'depth': 0.51}}","{0: {'rate_hz': 6.59}, 3: {'gain_db': -1.69}, 5: {'wet_level': 0.57}}",0.41799477379207894
+157.mp3,"{2: {'drive_db': 5.71}, 1: {'delay_seconds': 1.79}, 4: {'depth': 0.39}, 0: {'rate_hz': 18.22}, 5: {'wet_level': 0.48}, 3: {'gain_db': -4.39}}","{2: {'drive_db': 14.38}, 0: {'rate_hz': 12.68}, 4: {'depth': 0.36}}",0.5691103196099184
+158.mp3,"{3: {'gain_db': 2.37}, 2: {'drive_db': 14.93}, 0: {'rate_hz': 15.0}, 5: {'wet_level': 0.53}, 1: {'delay_seconds': 1.31}}","{4: {'depth': 0.31}, 0: {'rate_hz': 19.82}}",0.4064581280956635
+159.mp3,"{0: {'rate_hz': 4.52}, 1: {'delay_seconds': 2.64}, 4: {'depth': 0.46}, 3: {'gain_db': -5.46}, 5: {'wet_level': 0.39}, 2: {'drive_db': 11.94}}","{3: {'gain_db': 4.33}, 5: {'wet_level': 0.39}, 0: {'rate_hz': 19.08}, 1: {'delay_seconds': 1.83}, 2: {'drive_db': 5.08}}",0.4997892064709489
+160.mp3,{4: {'depth': 0.59}},"{3: {'gain_db': -9.73}, 1: {'delay_seconds': 2.5}, 0: {'rate_hz': 11.39}}",0.49313760176874355
+161.mp3,"{0: {'rate_hz': 12.46}, 4: {'depth': 0.33}, 5: {'wet_level': 0.34}}",{3: {'gain_db': -2.01}},0.558159085735014
+162.mp3,"{5: {'wet_level': 0.38}, 0: {'rate_hz': 11.17}, 1: {'delay_seconds': 4.6}, 4: {'depth': 0.49}}","{1: {'delay_seconds': 3.32}, 2: {'drive_db': 16.93}, 4: {'depth': 0.47}, 0: {'rate_hz': 5.52}, 5: {'wet_level': 0.59}}",0.5947191074676085
+163.mp3,{3: {'gain_db': -5.04}},"{2: {'drive_db': 5.63}, 0: {'rate_hz': 18.4}, 5: {'wet_level': 0.45}, 4: {'depth': 0.27}}",0.4596072030457845
+164.mp3,"{2: {'drive_db': 19.47}, 5: {'wet_level': 0.45}, 1: {'delay_seconds': 3.7}, 4: {'depth': 0.25}, 0: {'rate_hz': 3.21}, 3: {'gain_db': 1.78}}","{0: {'rate_hz': 3.97}, 4: {'depth': 0.36}, 3: {'gain_db': -2.05}, 5: {'wet_level': 0.22}, 1: {'delay_seconds': 3.92}, 2: {'drive_db': 15.67}}",0.7931555312335878
+165.mp3,"{0: {'rate_hz': 8.62}, 3: {'gain_db': -8.14}, 5: {'wet_level': 0.43}, 1: {'delay_seconds': 2.13}}","{3: {'gain_db': 5.57}, 1: {'delay_seconds': 3.22}}",0.5496656129217032
+166.mp3,"{0: {'rate_hz': 13.84}, 2: {'drive_db': 18.89}, 4: {'depth': 0.43}, 3: {'gain_db': 3.91}, 1: {'delay_seconds': 3.92}}","{2: {'drive_db': 6.92}, 1: {'delay_seconds': 4.05}, 5: {'wet_level': 0.49}, 4: {'depth': 0.52}, 3: {'gain_db': 3.46}, 0: {'rate_hz': 6.09}}",0.5529755423461253
+167.mp3,"{3: {'gain_db': 5.5}, 1: {'delay_seconds': 3.76}}","{2: {'drive_db': 18.22}, 5: {'wet_level': 0.53}}",0.31976379374786557
+168.mp3,"{2: {'drive_db': 7.11}, 3: {'gain_db': -4.33}}","{1: {'delay_seconds': 2.25}, 5: {'wet_level': 0.3}, 3: {'gain_db': 7.38}, 4: {'depth': 0.5}, 2: {'drive_db': 2.58}, 0: {'rate_hz': 9.28}}",0.45895888257846723
+169.mp3,"{5: {'wet_level': 0.57}, 0: {'rate_hz': 3.87}}","{0: {'rate_hz': 7.9}, 2: {'drive_db': 12.31}, 3: {'gain_db': -6.07}, 4: {'depth': 0.29}}",0.4845445604272031
+170.mp3,"{3: {'gain_db': -9.92}, 2: {'drive_db': 16.34}, 1: {'delay_seconds': 3.04}, 4: {'depth': 0.27}, 0: {'rate_hz': 10.7}}","{1: {'delay_seconds': 1.23}, 5: {'wet_level': 0.29}, 4: {'depth': 0.59}}",0.4831458046419094
+171.mp3,"{0: {'rate_hz': 12.71}, 4: {'depth': 0.24}, 5: {'wet_level': 0.53}, 1: {'delay_seconds': 2.0}}","{1: {'delay_seconds': 3.96}, 2: {'drive_db': 6.21}, 0: {'rate_hz': 4.74}, 4: {'depth': 0.37}, 5: {'wet_level': 0.34}}",0.6955609742980208
+172.mp3,"{3: {'gain_db': -5.13}, 2: {'drive_db': 18.71}, 1: {'delay_seconds': 2.62}}","{1: {'delay_seconds': 3.17}, 5: {'wet_level': 0.2}, 3: {'gain_db': -0.27}, 4: {'depth': 0.43}}",0.4882983499110993
+173.mp3,"{2: {'drive_db': 5.73}, 5: {'wet_level': 0.5}, 0: {'rate_hz': 4.36}, 4: {'depth': 0.32}, 3: {'gain_db': 0.75}}","{5: {'wet_level': 0.27}, 3: {'gain_db': -7.95}, 2: {'drive_db': 4.79}, 1: {'delay_seconds': 4.53}, 4: {'depth': 0.3}}",0.5513261103437606
+174.mp3,"{1: {'delay_seconds': 1.83}, 0: {'rate_hz': 4.79}, 2: {'drive_db': 9.49}}","{3: {'gain_db': 4.34}, 2: {'drive_db': 3.07}, 5: {'wet_level': 0.26}, 0: {'rate_hz': 13.26}, 1: {'delay_seconds': 3.33}, 4: {'depth': 0.47}}",0.46961159846629236
+175.mp3,{3: {'gain_db': 3.47}},{2: {'drive_db': 2.1}},0.7217233840223005
+176.mp3,{4: {'depth': 0.33}},"{5: {'wet_level': 0.5}, 0: {'rate_hz': 5.08}, 1: {'delay_seconds': 4.83}, 2: {'drive_db': 18.01}, 3: {'gain_db': 9.02}}",0.2136669816542479
+177.mp3,"{3: {'gain_db': -8.28}, 0: {'rate_hz': 15.78}, 2: {'drive_db': 5.27}, 1: {'delay_seconds': 3.76}}","{2: {'drive_db': 18.97}, 4: {'depth': 0.33}, 5: {'wet_level': 0.37}}",0.3745103547649279
+178.mp3,{4: {'depth': 0.57}},"{5: {'wet_level': 0.47}, 1: {'delay_seconds': 3.48}, 2: {'drive_db': 2.43}, 3: {'gain_db': -8.97}}",0.42006586421227804
+179.mp3,"{0: {'rate_hz': 17.02}, 5: {'wet_level': 0.38}}","{0: {'rate_hz': 14.61}, 2: {'drive_db': 1.04}, 4: {'depth': 0.45}}",0.5956825997002042
+180.mp3,"{2: {'drive_db': 9.38}, 5: {'wet_level': 0.57}, 0: {'rate_hz': 10.37}, 3: {'gain_db': -2.05}, 4: {'depth': 0.23}}","{4: {'depth': 0.27}, 2: {'drive_db': 13.57}, 5: {'wet_level': 0.45}, 3: {'gain_db': 8.68}}",0.67212573689384
+181.mp3,"{1: {'delay_seconds': 1.64}, 5: {'wet_level': 0.25}}","{5: {'wet_level': 0.36}, 3: {'gain_db': 5.4}, 0: {'rate_hz': 1.12}, 4: {'depth': 0.6}, 1: {'delay_seconds': 3.01}, 2: {'drive_db': 10.46}}",0.4257973483297162
+182.mp3,"{4: {'depth': 0.52}, 2: {'drive_db': 1.36}, 3: {'gain_db': -1.03}, 1: {'delay_seconds': 2.58}, 0: {'rate_hz': 8.37}}","{0: {'rate_hz': 11.07}, 2: {'drive_db': 1.46}, 4: {'depth': 0.22}, 5: {'wet_level': 0.59}}",0.4673020407954046
+183.mp3,"{3: {'gain_db': -0.28}, 0: {'rate_hz': 12.56}, 2: {'drive_db': 8.62}}","{4: {'depth': 0.49}, 5: {'wet_level': 0.3}, 0: {'rate_hz': 2.24}}",0.4827706111010891
+184.mp3,{5: {'wet_level': 0.39}},"{4: {'depth': 0.6}, 3: {'gain_db': -1.53}, 0: {'rate_hz': 15.87}, 5: {'wet_level': 0.47}, 2: {'drive_db': 11.99}, 1: {'delay_seconds': 4.69}}",0.28515543323766546
+185.mp3,"{0: {'rate_hz': 4.65}, 1: {'delay_seconds': 4.8}, 5: {'wet_level': 0.26}, 4: {'depth': 0.6}, 2: {'drive_db': 11.93}, 3: {'gain_db': -4.48}}","{5: {'wet_level': 0.33}, 3: {'gain_db': 5.57}, 1: {'delay_seconds': 1.14}, 2: {'drive_db': 2.61}, 0: {'rate_hz': 5.14}, 4: {'depth': 0.56}}",0.5868531222523973
+186.mp3,{5: {'wet_level': 0.27}},"{1: {'delay_seconds': 4.35}, 0: {'rate_hz': 13.78}, 2: {'drive_db': 2.49}}",0.5084681682061002
+187.mp3,"{1: {'delay_seconds': 2.51}, 0: {'rate_hz': 6.65}}","{1: {'delay_seconds': 1.33}, 2: {'drive_db': 2.03}, 4: {'depth': 0.43}, 0: {'rate_hz': 17.73}}",0.6156118799288252
+188.mp3,"{0: {'rate_hz': 10.81}, 2: {'drive_db': 7.46}}","{4: {'depth': 0.25}, 1: {'delay_seconds': 4.43}, 2: {'drive_db': 6.35}}",0.5428662465770894
+189.mp3,"{4: {'depth': 0.34}, 0: {'rate_hz': 18.29}, 1: {'delay_seconds': 2.41}, 3: {'gain_db': -6.19}, 2: {'drive_db': 5.19}}","{5: {'wet_level': 0.52}, 2: {'drive_db': 16.29}, 4: {'depth': 0.56}, 1: {'delay_seconds': 2.64}, 0: {'rate_hz': 7.58}}",0.4968851927648528
+190.mp3,{4: {'depth': 0.22}},"{3: {'gain_db': -4.14}, 2: {'drive_db': 3.24}, 1: {'delay_seconds': 3.14}, 5: {'wet_level': 0.41}}",0.570297411207688
+191.mp3,{2: {'drive_db': 14.5}},"{3: {'gain_db': 0.23}, 4: {'depth': 0.48}, 1: {'delay_seconds': 4.96}, 0: {'rate_hz': 5.24}}",0.3570944535418389
+192.mp3,"{0: {'rate_hz': 8.91}, 5: {'wet_level': 0.58}, 3: {'gain_db': 4.37}, 2: {'drive_db': 14.56}, 1: {'delay_seconds': 3.93}, 4: {'depth': 0.46}}","{0: {'rate_hz': 17.53}, 2: {'drive_db': 3.01}, 5: {'wet_level': 0.52}, 4: {'depth': 0.38}, 3: {'gain_db': 7.63}, 1: {'delay_seconds': 1.88}}",0.6484050560237965
+193.mp3,{5: {'wet_level': 0.52}},"{5: {'wet_level': 0.21}, 1: {'delay_seconds': 2.37}, 3: {'gain_db': -4.03}}",0.6888937227558068
+194.mp3,"{3: {'gain_db': 3.62}, 5: {'wet_level': 0.2}, 1: {'delay_seconds': 2.34}, 2: {'drive_db': 9.12}}","{4: {'depth': 0.55}, 1: {'delay_seconds': 2.35}, 3: {'gain_db': -0.49}, 5: {'wet_level': 0.47}}",0.5357895542289435
+195.mp3,"{2: {'drive_db': 1.49}, 0: {'rate_hz': 10.34}, 3: {'gain_db': -2.12}}","{5: {'wet_level': 0.25}, 3: {'gain_db': -4.5}, 2: {'drive_db': 8.84}}",0.6863873511503107
+196.mp3,"{0: {'rate_hz': 12.32}, 2: {'drive_db': 9.52}, 3: {'gain_db': 3.07}, 5: {'wet_level': 0.21}, 1: {'delay_seconds': 1.5}}","{4: {'depth': 0.22}, 2: {'drive_db': 19.62}, 3: {'gain_db': -9.63}, 5: {'wet_level': 0.28}, 1: {'delay_seconds': 3.75}}",0.5189834452683296
+197.mp3,{4: {'depth': 0.42}},{5: {'wet_level': 0.31}},0.6448135596515439
+198.mp3,"{0: {'rate_hz': 13.01}, 3: {'gain_db': 8.49}, 1: {'delay_seconds': 3.65}, 4: {'depth': 0.49}, 2: {'drive_db': 19.5}, 5: {'wet_level': 0.43}}","{4: {'depth': 0.25}, 3: {'gain_db': 4.04}, 1: {'delay_seconds': 1.81}, 5: {'wet_level': 0.53}}",0.460481190044039
+199.mp3,"{0: {'rate_hz': 17.82}, 1: {'delay_seconds': 3.27}, 3: {'gain_db': -3.31}, 4: {'depth': 0.39}}","{4: {'depth': 0.31}, 2: {'drive_db': 18.35}, 3: {'gain_db': -5.71}, 0: {'rate_hz': 17.44}, 5: {'wet_level': 0.2}}",0.5146870187035846
+200.mp3,"{4: {'depth': 0.26}, 2: {'drive_db': 1.88}, 0: {'rate_hz': 5.5}, 5: {'wet_level': 0.33}, 3: {'gain_db': -5.13}, 1: {'delay_seconds': 4.52}}","{2: {'drive_db': 2.76}, 4: {'depth': 0.22}, 0: {'rate_hz': 12.29}}",0.5344091666773559
+201.mp3,"{5: {'wet_level': 0.36}, 4: {'depth': 0.42}}","{4: {'depth': 0.41}, 2: {'drive_db': 2.58}, 0: {'rate_hz': 4.22}, 3: {'gain_db': -2.15}, 5: {'wet_level': 0.37}, 1: {'delay_seconds': 2.49}}",0.7219778769127788
+202.mp3,{3: {'gain_db': 2.72}},"{5: {'wet_level': 0.38}, 0: {'rate_hz': 16.16}}",0.5069700632633769
+203.mp3,"{0: {'rate_hz': 5.22}, 1: {'delay_seconds': 3.84}, 2: {'drive_db': 19.37}, 3: {'gain_db': 9.49}, 4: {'depth': 0.46}}","{0: {'rate_hz': 5.02}, 5: {'wet_level': 0.51}, 1: {'delay_seconds': 4.9}, 4: {'depth': 0.43}, 2: {'drive_db': 6.53}, 3: {'gain_db': -3.65}}",0.481370877537072
+204.mp3,"{2: {'drive_db': 7.84}, 0: {'rate_hz': 3.12}, 4: {'depth': 0.22}}","{2: {'drive_db': 6.5}, 4: {'depth': 0.47}, 5: {'wet_level': 0.6}, 0: {'rate_hz': 15.27}, 1: {'delay_seconds': 3.69}}",0.4095481446226809
+205.mp3,{1: {'delay_seconds': 3.87}},"{5: {'wet_level': 0.43}, 1: {'delay_seconds': 3.17}, 0: {'rate_hz': 7.63}, 3: {'gain_db': -8.69}}",0.6625972705328959
+206.mp3,"{1: {'delay_seconds': 2.08}, 4: {'depth': 0.26}, 0: {'rate_hz': 16.78}, 3: {'gain_db': 4.54}, 5: {'wet_level': 0.33}, 2: {'drive_db': 17.32}}","{1: {'delay_seconds': 4.27}, 4: {'depth': 0.52}, 0: {'rate_hz': 4.36}, 5: {'wet_level': 0.39}, 2: {'drive_db': 8.64}, 3: {'gain_db': 1.35}}",0.5939911684503695
+207.mp3,"{4: {'depth': 0.33}, 0: {'rate_hz': 10.54}, 1: {'delay_seconds': 4.71}, 2: {'drive_db': 19.6}}","{4: {'depth': 0.43}, 0: {'rate_hz': 12.27}}",0.4397881311834218
+208.mp3,"{0: {'rate_hz': 6.87}, 4: {'depth': 0.22}, 2: {'drive_db': 18.73}}","{1: {'delay_seconds': 4.88}, 4: {'depth': 0.39}}",0.4186397734941243
+209.mp3,{0: {'rate_hz': 4.52}},"{4: {'depth': 0.46}, 5: {'wet_level': 0.33}, 3: {'gain_db': -1.68}, 2: {'drive_db': 16.09}}",0.4581466945476574
+210.mp3,"{5: {'wet_level': 0.4}, 1: {'delay_seconds': 1.5}}",{4: {'depth': 0.47}},0.5625727573726201
+211.mp3,{5: {'wet_level': 0.27}},"{4: {'depth': 0.56}, 2: {'drive_db': 11.28}, 0: {'rate_hz': 4.28}, 3: {'gain_db': -0.17}, 1: {'delay_seconds': 1.5}}",0.4570028604877199
+212.mp3,"{4: {'depth': 0.37}, 0: {'rate_hz': 17.54}, 3: {'gain_db': -0.32}, 1: {'delay_seconds': 2.42}, 2: {'drive_db': 11.73}}","{3: {'gain_db': -1.11}, 4: {'depth': 0.45}, 0: {'rate_hz': 18.99}, 2: {'drive_db': 10.47}}",0.790707828710764
+213.mp3,"{3: {'gain_db': 2.1}, 1: {'delay_seconds': 1.1}, 5: {'wet_level': 0.32}}","{2: {'drive_db': 18.96}, 5: {'wet_level': 0.36}, 1: {'delay_seconds': 4.24}, 4: {'depth': 0.59}, 0: {'rate_hz': 19.66}}",0.22574865311828593
+214.mp3,"{4: {'depth': 0.6}, 2: {'drive_db': 12.7}, 0: {'rate_hz': 4.41}, 3: {'gain_db': -3.62}, 5: {'wet_level': 0.43}, 1: {'delay_seconds': 2.37}}","{3: {'gain_db': -1.16}, 4: {'depth': 0.31}, 0: {'rate_hz': 10.3}, 5: {'wet_level': 0.25}, 1: {'delay_seconds': 3.93}}",0.6071388368411578
+215.mp3,"{2: {'drive_db': 13.81}, 4: {'depth': 0.5}, 3: {'gain_db': -5.79}}","{0: {'rate_hz': 1.98}, 2: {'drive_db': 15.39}, 5: {'wet_level': 0.43}, 1: {'delay_seconds': 4.09}, 3: {'gain_db': -1.62}, 4: {'depth': 0.41}}",0.5408795798647318
+216.mp3,"{1: {'delay_seconds': 3.14}, 4: {'depth': 0.53}, 0: {'rate_hz': 10.65}, 3: {'gain_db': -1.53}, 2: {'drive_db': 10.25}, 5: {'wet_level': 0.46}}","{5: {'wet_level': 0.46}, 2: {'drive_db': 10.89}, 3: {'gain_db': -4.96}, 1: {'delay_seconds': 3.02}}",0.5728298001620084
+217.mp3,"{4: {'depth': 0.59}, 1: {'delay_seconds': 1.6}, 5: {'wet_level': 0.51}, 0: {'rate_hz': 13.54}, 2: {'drive_db': 8.3}, 3: {'gain_db': -8.92}}","{2: {'drive_db': 5.42}, 4: {'depth': 0.48}, 0: {'rate_hz': 1.07}, 5: {'wet_level': 0.55}}",0.6964488495723894
+218.mp3,"{3: {'gain_db': -6.85}, 4: {'depth': 0.59}, 0: {'rate_hz': 18.76}, 2: {'drive_db': 18.64}, 5: {'wet_level': 0.47}, 1: {'delay_seconds': 2.43}}","{1: {'delay_seconds': 4.85}, 0: {'rate_hz': 13.52}, 4: {'depth': 0.39}, 2: {'drive_db': 5.73}}",0.5051770144414903
+219.mp3,{2: {'drive_db': 4.84}},"{5: {'wet_level': 0.26}, 0: {'rate_hz': 19.97}}",0.5447813661221351
+220.mp3,"{4: {'depth': 0.38}, 2: {'drive_db': 12.17}, 0: {'rate_hz': 14.95}, 3: {'gain_db': 1.61}, 1: {'delay_seconds': 4.88}}",{5: {'wet_level': 0.46}},0.2688509455556857
+221.mp3,"{3: {'gain_db': 3.87}, 2: {'drive_db': 14.35}, 5: {'wet_level': 0.6}, 0: {'rate_hz': 1.92}, 1: {'delay_seconds': 4.66}}",{0: {'rate_hz': 16.7}},0.24606659224217067
+222.mp3,"{5: {'wet_level': 0.33}, 3: {'gain_db': -6.77}, 2: {'drive_db': 19.5}}",{2: {'drive_db': 13.6}},0.7368120918431091
+223.mp3,"{2: {'drive_db': 1.38}, 0: {'rate_hz': 15.29}, 3: {'gain_db': -8.51}, 4: {'depth': 0.27}, 5: {'wet_level': 0.41}}",{1: {'delay_seconds': 4.61}},0.40638116263542123
+224.mp3,"{1: {'delay_seconds': 2.49}, 2: {'drive_db': 13.48}, 5: {'wet_level': 0.6}}","{2: {'drive_db': 10.28}, 1: {'delay_seconds': 3.6}, 5: {'wet_level': 0.53}, 0: {'rate_hz': 14.65}}",0.67723812670662
+225.mp3,"{0: {'rate_hz': 19.38}, 2: {'drive_db': 2.68}}",{4: {'depth': 0.4}},0.5167192940528861
+226.mp3,"{2: {'drive_db': 19.71}, 5: {'wet_level': 0.52}}","{0: {'rate_hz': 4.48}, 3: {'gain_db': -2.29}}",0.4341514320493053
+227.mp3,"{2: {'drive_db': 19.23}, 4: {'depth': 0.55}, 0: {'rate_hz': 14.6}, 1: {'delay_seconds': 4.24}, 3: {'gain_db': 1.72}}","{5: {'wet_level': 0.44}, 1: {'delay_seconds': 2.47}}",0.2579139980708035
+228.mp3,"{0: {'rate_hz': 6.48}, 2: {'drive_db': 8.76}, 5: {'wet_level': 0.2}, 1: {'delay_seconds': 3.9}, 4: {'depth': 0.23}, 3: {'gain_db': 6.67}}",{1: {'delay_seconds': 2.96}},0.5372290333301011
+229.mp3,{1: {'delay_seconds': 3.22}},"{1: {'delay_seconds': 4.72}, 0: {'rate_hz': 15.96}, 5: {'wet_level': 0.27}}",0.6064469540201727
+230.mp3,"{4: {'depth': 0.23}, 1: {'delay_seconds': 3.31}, 3: {'gain_db': 7.54}, 0: {'rate_hz': 13.86}, 5: {'wet_level': 0.43}, 2: {'drive_db': 2.03}}","{4: {'depth': 0.46}, 0: {'rate_hz': 17.45}, 5: {'wet_level': 0.6}, 2: {'drive_db': 4.78}, 3: {'gain_db': -4.22}}",0.5792196292953171
+231.mp3,{5: {'wet_level': 0.31}},{2: {'drive_db': 5.02}},0.7654985982826384
+232.mp3,"{0: {'rate_hz': 12.86}, 5: {'wet_level': 0.58}, 2: {'drive_db': 10.59}, 3: {'gain_db': 1.98}, 4: {'depth': 0.25}}","{4: {'depth': 0.22}, 0: {'rate_hz': 14.01}, 3: {'gain_db': -1.0}, 2: {'drive_db': 8.76}}",0.5977513322076246
+233.mp3,"{3: {'gain_db': 7.58}, 4: {'depth': 0.44}, 0: {'rate_hz': 15.1}, 1: {'delay_seconds': 3.54}}","{1: {'delay_seconds': 1.83}, 2: {'drive_db': 10.02}, 4: {'depth': 0.48}}",0.46535440953150337
+234.mp3,"{3: {'gain_db': -1.5}, 4: {'depth': 0.37}, 1: {'delay_seconds': 3.17}}","{4: {'depth': 0.55}, 1: {'delay_seconds': 2.31}}",0.7763153261098711
+235.mp3,"{3: {'gain_db': 4.0}, 2: {'drive_db': 6.63}, 5: {'wet_level': 0.47}, 4: {'depth': 0.47}}","{1: {'delay_seconds': 2.46}, 4: {'depth': 0.57}}",0.5027835583824537
+236.mp3,"{5: {'wet_level': 0.39}, 0: {'rate_hz': 18.82}}","{5: {'wet_level': 0.56}, 3: {'gain_db': 3.75}, 0: {'rate_hz': 5.9}}",0.5978702473542116
+237.mp3,"{0: {'rate_hz': 13.83}, 2: {'drive_db': 12.57}, 3: {'gain_db': -1.54}}","{4: {'depth': 0.49}, 2: {'drive_db': 17.53}, 1: {'delay_seconds': 1.99}}",0.49272727676254774
+238.mp3,"{0: {'rate_hz': 10.4}, 5: {'wet_level': 0.55}, 2: {'drive_db': 1.84}, 3: {'gain_db': -6.28}, 4: {'depth': 0.44}}","{2: {'drive_db': 14.96}, 1: {'delay_seconds': 2.79}}",0.36429152966217343
+239.mp3,"{4: {'depth': 0.48}, 5: {'wet_level': 0.48}, 0: {'rate_hz': 5.33}, 2: {'drive_db': 16.63}, 1: {'delay_seconds': 3.64}, 3: {'gain_db': -3.47}}","{5: {'wet_level': 0.56}, 3: {'gain_db': -2.39}, 0: {'rate_hz': 15.17}}",0.4050022370101187
+240.mp3,"{4: {'depth': 0.25}, 1: {'delay_seconds': 3.79}, 2: {'drive_db': 11.73}}","{5: {'wet_level': 0.2}, 3: {'gain_db': 4.41}, 1: {'delay_seconds': 3.41}, 0: {'rate_hz': 5.74}}",0.5461333304772163
+241.mp3,"{4: {'depth': 0.21}, 3: {'gain_db': -5.32}, 5: {'wet_level': 0.3}, 0: {'rate_hz': 19.8}}",{5: {'wet_level': 0.44}},0.5505929008785678
+242.mp3,"{3: {'gain_db': 8.9}, 1: {'delay_seconds': 2.98}}","{2: {'drive_db': 6.38}, 4: {'depth': 0.31}}",0.4808747029145332
+243.mp3,"{1: {'delay_seconds': 1.07}, 0: {'rate_hz': 17.1}, 3: {'gain_db': -4.68}, 2: {'drive_db': 16.03}, 5: {'wet_level': 0.36}}","{2: {'drive_db': 11.54}, 0: {'rate_hz': 8.55}}",0.656074499346152
+244.mp3,"{3: {'gain_db': -6.12}, 2: {'drive_db': 4.04}, 0: {'rate_hz': 9.99}}","{3: {'gain_db': 2.01}, 5: {'wet_level': 0.37}, 0: {'rate_hz': 13.23}, 2: {'drive_db': 1.98}, 4: {'depth': 0.37}, 1: {'delay_seconds': 1.14}}",0.588775242810059
+245.mp3,"{4: {'depth': 0.37}, 5: {'wet_level': 0.26}, 0: {'rate_hz': 13.38}, 1: {'delay_seconds': 4.08}, 3: {'gain_db': -4.84}}","{1: {'delay_seconds': 1.48}, 2: {'drive_db': 5.58}, 4: {'depth': 0.49}, 3: {'gain_db': -1.27}, 5: {'wet_level': 0.41}}",0.6062648415495512
+246.mp3,"{1: {'delay_seconds': 2.35}, 2: {'drive_db': 11.72}}","{1: {'delay_seconds': 3.07}, 5: {'wet_level': 0.29}, 0: {'rate_hz': 6.12}, 3: {'gain_db': 2.61}, 2: {'drive_db': 10.23}}",0.6461960026815433
+247.mp3,"{4: {'depth': 0.22}, 5: {'wet_level': 0.42}, 2: {'drive_db': 17.16}}","{3: {'gain_db': -0.43}, 0: {'rate_hz': 9.66}}",0.4488104236525565
+248.mp3,"{3: {'gain_db': -2.23}, 4: {'depth': 0.46}}",{2: {'drive_db': 8.44}},0.6091048674776959
+249.mp3,"{4: {'depth': 0.22}, 2: {'drive_db': 11.32}, 1: {'delay_seconds': 2.85}, 0: {'rate_hz': 7.28}}","{3: {'gain_db': -6.33}, 2: {'drive_db': 12.45}, 5: {'wet_level': 0.38}}",0.5857102351502522

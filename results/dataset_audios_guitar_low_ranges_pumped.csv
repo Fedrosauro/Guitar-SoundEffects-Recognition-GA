@@ -1,0 +1,4 @@
+audio_name,applied_effects,GA_effects,similarity_indv,best_fit
+0.mp3,"{3: {'gain_db': -4.65}, 2: {'drive_db': 11.66}, 4: {'depth': 0.21}, 0: {'rate_hz': 13.41}, 1: {'delay_seconds': 3.87}}",,,
+1.mp3,"{5: {'wet_level': 0.58}, 0: {'rate_hz': 5.38}, 2: {'drive_db': 15.54}, 3: {'gain_db': 0.0}}",,,
+2.mp3,"{1: {'delay_seconds': 4.1}, 0: {'rate_hz': 17.48}}",,,

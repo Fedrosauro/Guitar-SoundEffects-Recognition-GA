@@ -14,6 +14,7 @@ from utils import *
 #################################################
 #      EFFECTS TO TEST VARIUS INSTRUMENTS
 #################################################
+'''
 n_effects = 9
 effects = [i for i in range(n_effects)]
 
@@ -39,21 +40,21 @@ effects_map = {
     6: 'Compressor',
     7: 'Limiter',
     8: 'Clipping',
-}
+}'''
 
 #################################################
 #      EFFECTS TO TEST GUITAR EFFECTS REC.
 #################################################
-'''
+
 n_effects = 6
 effects = [i for i in range(n_effects)]
 effect_structure = {
-    0: { "rate_hz": ('float', (0.0, 100.0)), },# Chorus
-    1: { "delay_seconds": ('float', (0.0, 10.0)), },# Delay
-    2: { "drive_db": ('float', (0.0, 50.0)), },# Distortion
-    3: { "gain_db": ('float', (-50.0, 50.0)) },# Gain
-    4: { "depth": ('float', (0.0, 1.0)), },# Phaser
-    5: { "wet_level": ('float', (0.0, 1.0)), },# Reverb
+    0: { "rate_hz": ('float', (1.0, 20.0)), },# Chorus
+    1: { "delay_seconds": ('float', (1.0, 5.0)), },# Delay
+    2: { "drive_db": ('float', (1.0, 20.0)), },# Distortion
+    3: { "gain_db": ('float', (-10.0, 10.0)) },# Gain
+    4: { "depth": ('float', (0.2, 0.6)), },# Phaser
+    5: { "wet_level": ('float', (0.2, 0.6)), },# Reverb
 }
 effects_map = {
     0: 'Chorus',
@@ -62,32 +63,37 @@ effects_map = {
     3: 'Gain',
     4: 'Phaser',
     5: 'Reverb',
-}'''
+}
 
 onset_threshold = 0.5
 frame_threshold = 0.3
 threshold = 2.2
 fan_out = 25
-max_distance_atan = 20 
+max_distance_atan = 50 
 max_key_distance = 50 
 
 instrument_program = 30 #guitar 30, violin 40
 constellation_map_alg = z_score_peaks_calculation
 fitness = fitness_lines_difference_for_parallel_comp
 
-pop_size = 100
+pop_size = 1 
 p_mutation = 0.8
-p_crossover = 0.4
+p_crossover = 0.6
 p_pop_item = 0.5
 p_add_new_effect = 0.5
-n_iter = 10
-t_size = 5
+n_iter = 3750 #15 * 250
+t_size = 1
 
 soundfont = '../audio2midi2audio/FluidR3_GM.sf2'  # Path to your SoundFont file
 clear_audio_path = 'clear_audio.mp3'
-midi_path = 'clear_midi.mid'
+midi_path = 'clear_midi.mid'    
 
-df = pd.read_csv('../results/dataset_audios_violin.csv')
+df = pd.read_csv('../results/dataset_audios_guitar_low_ranges_w_clean_random_search.csv')
+df['GA_effects'] = pd.Series('')        
+df['similarity_indv'] = pd.Series('')        
+df['best_fit'] = pd.Series('')        
+df.to_csv('../results/dataset_audios_guitar_low_ranges_w_clean_random_search.csv', index=False)
+
 
 def dataset_GA_execution_general(df, 
                             onset_threshold,
@@ -114,16 +120,20 @@ def dataset_GA_execution_general(df,
                             effects_map):
     
     temp_data_ga_effects = []
-    temp_data_best_fit = []
+    temp_data_ga_fitness = []
 
-    for _, row in df.iterrows():
-        desired_audio_path = '../dataset_creation/violin_audios/' + row["audio_name"]
+    for index, row in df.iloc[::-1].iterrows():
+        desired_audio_path = '../dataset_creation/audios_low_ranges_w_clean/' + row["audio_name"]
+        
+        name_parts = row["audio_name"].split('.')
+        clean_audio_path = f"../dataset_creation/audios_low_ranges_w_clean/{name_parts[0]}_clean.{name_parts[1]}"
         #desired_audio_path = '../dataset_creation/test_audios/78.mp3'
         print(desired_audio_path)
-        mp3_to_midi(desired_audio_path, midi_path, onset_threshold, frame_threshold, instrument_program)
-        midi_to_mp3(midi_path, clear_audio_path, soundfont)
+        print(clean_audio_path)
+        #mp3_to_midi(desired_audio_path, midi_path, onset_threshold, frame_threshold, instrument_program)
+        #midi_to_mp3(midi_path, clear_audio_path, soundfont)
         
-        best_invdivid, best_fit = GA_lines_comp(clear_audio_path, 
+        best_invdivid, best_fit = GA_lines_comp(clean_audio_path, 
                                         desired_audio_path,
                                         threshold,
                                         fan_out,
@@ -141,12 +151,12 @@ def dataset_GA_execution_general(df,
                                         effects,
                                         effect_structure,
                                         effects_map)    
-        print(best_invdivid)
+        print(f"{best_invdivid}, {best_fit}")
         temp_data_ga_effects.append(best_invdivid)
-        temp_data_best_fit.append(best_fit)
-        df['GA_effects'] = pd.Series(temp_data_ga_effects)
-        df['dissimilarity'] = pd.Series(temp_data_best_fit)
-        df.to_csv('../results/dataset_audios_violin.csv', index=False)
+        temp_data_ga_fitness.append(best_fit)
+        df['GA_effects'] = pd.Series(temp_data_ga_effects)        
+        df['best_fit'] = pd.Series(temp_data_ga_fitness)        
+        df.to_csv('../results/dataset_audios_guitar_low_ranges_w_clean_random_search.csv', index=False)
 
 if __name__ == '__main__':
     dataset_GA_execution_general(df, 

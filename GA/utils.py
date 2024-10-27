@@ -205,8 +205,8 @@ def fitness_lines_difference(individual, clear_audio_path, hash_table, m1, q1, o
     return individual, diss * (len(original_or_times) / len(or_times))
 
 def fitness_lines_difference_for_parallel_comp(individual, clear_audio_path, hash_table, m1, q1, original_or_times, constellation_map_alg, threshold, fan_out, max_key_distance, max_distance_atan, effects_map):
-    fd_mp3_clear_name, temp_mp3_clear_name = tempfile.mkstemp(suffix='.mp3', dir="../temp_files/")
-    fd_effected_audio_name, temp_effected_audio_name = tempfile.mkstemp(suffix='.mp3', dir="../temp_files/")  # Temporary file for effected audio
+    fd_mp3_clear_name, temp_mp3_clear_name = tempfile.mkstemp(suffix='.mp3', dir="../temporary_files/")
+    fd_effected_audio_name, temp_effected_audio_name = tempfile.mkstemp(suffix='.mp3', dir="../temporary_files/")  # Temporary file for effected audio
 
     os.close(fd_mp3_clear_name)
     os.close(fd_effected_audio_name)
@@ -234,8 +234,12 @@ def fitness_lines_difference_for_parallel_comp(individual, clear_audio_path, has
             x_intersection =  (q2 - q1)/(m1 - m2)
             diss = dissimilarity_lines_difference_angle_correction(m1, q1, m2, q2, x_intersection >= max_x * 2 or x_intersection <= -max_x * 0.5, max_distance_atan)
         else:
+            Path(temp_mp3_clear_name).unlink(missing_ok=True)
+            Path(temp_effected_audio_name).unlink(missing_ok=True)
             return individual, 1000.0
     else:
+        Path(temp_mp3_clear_name).unlink(missing_ok=True)
+        Path(temp_effected_audio_name).unlink(missing_ok=True)
         return individual, 1000.0
         
     Path(temp_mp3_clear_name).unlink(missing_ok=True)
@@ -244,7 +248,7 @@ def fitness_lines_difference_for_parallel_comp(individual, clear_audio_path, has
     return individual, diss * (len(original_or_times) / len(or_times))
 
 def parallel_fitness_calculation(pop, clear_audio_path, hash_table, m1, q1, or_times, constellation_map_alg, threshold, fan_out, fit, max_key_distance, max_distance_atan, effects_map):
-    n_workers = 4
+    n_workers = 1
     results = []
 
     with concurrent.futures.ProcessPoolExecutor(max_workers=n_workers) as executor:
@@ -273,13 +277,13 @@ def mutation(individual, p_pop_item, p_add_new_effect, effects, effect_structure
     offspring = deepcopy(individual)
     items = list(offspring.items())
     
-    if random.random() > p_pop_item:
+    if random.random() < p_pop_item:
         items.pop(random.randrange(len(items))) 
         return dict(items)
     
     available_effects = set(effects) - set(offspring.keys())
     if not available_effects:
-        if random.random() > p_pop_item:
+        if random.random() < p_pop_item:
             items.pop(random.randrange(len(items))) 
             return dict(items)
         else:
@@ -289,7 +293,7 @@ def mutation(individual, p_pop_item, p_add_new_effect, effects, effect_structure
     structure = effect_structure[effect]
     
     #randomly decide between replacing an existing effect or adding a new one
-    if random.random() > p_add_new_effect:
+    if random.random() < p_add_new_effect:
         new_gene = (
             effect, 
             {param: round(random.uniform(range_[0], range_[1]), 2) 
@@ -305,8 +309,8 @@ def mutation(individual, p_pop_item, p_add_new_effect, effects, effect_structure
         )
         items[index] = new_gene
     
-    return dict(items)
-
+    return dict(items)  
+    
 def aggressive_mutation(individual, p_pop_item, p_add_new_effect, effects, effect_structure, p_mutation):
     k = ceil(p_mutation * len(individual))  #number of mutation operations
     n_mut = random.randint(1, k) if k != 0 else 1
@@ -417,6 +421,10 @@ def init_population(pop_size, effects, effect_structure):
 def GA_lines_comp(clear_audio_path, desired_audio_path, threshold, fan_out, max_distance_atan, max_key_distance, constellation_map_alg, fit, pop_size, p_mutation, p_crossover, p_pop_item, p_add_new_effect, n_iter, t_size, effects, effect_structure, effects_map):
   pop = init_population(pop_size, effects, effect_structure)
   
+  fd_mp3_clear_audio_path, temp_mp3_clear_audio_path = tempfile.mkstemp(suffix='.mp3', dir="../temporary_files/")
+  os.close(fd_mp3_clear_audio_path)
+  shutil.copy(clear_audio_path, temp_mp3_clear_audio_path)
+  
   peaks_original = constellation_map_alg(desired_audio_path, threshold)
   hashes0 = generate_hashes(peaks_original, fan_out)
   hash_table = create_database(hashes0)
@@ -427,7 +435,7 @@ def GA_lines_comp(clear_audio_path, desired_audio_path, threshold, fan_out, max_
   time_pairs = search_database(copy_hash_table, hashes1, max_key_distance)
   or_times, sample_times = zip(*time_pairs)
   if not or_times:
-      return "error"
+      return "error", "error"
   popt1, _ = curve_fit(linear_func, or_times, sample_times)
   m1, q1 = popt1
   
@@ -437,42 +445,39 @@ def GA_lines_comp(clear_audio_path, desired_audio_path, threshold, fan_out, max_
   for i in range(0, n_iter):
     print(f"Iteration: {i}")
     
-    pop_with_fitness = parallel_fitness_calculation(
-        pop, clear_audio_path, hash_table, m1, q1, or_times, constellation_map_alg, threshold, fan_out, fit, max_key_distance, max_distance_atan, effects_map
-    )
-    
-    print(f'TOURNAMENT SELECTION')
-    selected = [
-        tournament_selection_with_precomputed_fitness(pop_with_fitness, t_size) 
-        for _ in range(pop_size)
-    ]  
-         
-    pairs = [[selected[i], selected[(i + 1) % len(selected)]] for i in range(len(selected))]    
-
-    print(f'CROSSOVER AND MUTATION')
-    offsprings_cross = []
-    for x, y in pairs:
-        if random.random() < p_crossover:
-            of1, of2 = crossover(x, y)
-            if random.choice([True, False]):
-                offsprings_cross.append(of1)
-            else:
-                offsprings_cross.append(of2)
-        else:
-            if random.choice([True, False]):
-                offsprings_cross.append(x)
-            else:
-                offsprings_cross.append(y)
-                
-    offsprings = []
-    for x in offsprings_cross:
-        if random.random() < p_mutation:
-            of1 = mutation(inner_mutation(x, effect_structure), p_pop_item, p_add_new_effect, effects, effect_structure)
-            offsprings.append(of1)
-        else:
-            offsprings.append(x)
-            
-    pop = deepcopy(offsprings)
+    #pop_with_fitness = parallel_fitness_calculation(
+    #    pop, clear_audio_path, hash_table, m1, q1, or_times, constellation_map_alg, threshold, fan_out, fit, max_key_distance, max_distance_atan, effects_map
+    #)
+    #
+    #print(f'TOURNAMENT SELECTION')
+    #selected = [
+    #    tournament_selection_with_precomputed_fitness(pop_with_fitness, t_size) 
+    #    for _ in range(pop_size)
+    #]  
+    #     
+    #pairs = [[selected[i], selected[(i + 1) % len(selected)]] for i in range(len(selected))]    
+    #
+    #
+    #print(f'CROSSOVER AND MUTATION')
+    #offsprings_cross = []
+    #for x, y in pairs:
+    #    if random.random() < p_crossover:
+    #        of1, of2 = crossover(x, y)
+    #        offsprings_cross.append(random.choice([of1, of2]))
+    #    else:
+    #        offsprings_cross.append(random.choice([x, y]))
+    #            
+    #offsprings = []
+    #for x in offsprings_cross:
+    #    if random.random() < p_mutation:
+    #        of1 = mutation(x, p_pop_item, p_add_new_effect, effects, effect_structure)
+    #        of1_deeper_mut = inner_mutation(of1, effect_structure)
+    #        offsprings.append(of1_deeper_mut)
+    #    else:
+    #        offsprings.append(x)      
+    #                  
+    #pop = deepcopy(offsprings)
+    pop = init_population(pop_size, effects, effect_structure)
     
     print(f'CANDIDATE BEST')
     pop_with_fitness = parallel_fitness_calculation(
@@ -487,8 +492,15 @@ def GA_lines_comp(clear_audio_path, desired_audio_path, threshold, fan_out, max_
     if best_candidate_fitness < best_so_far_fitness:
       best = best_candidate
       j = i
+      if best_candidate_fitness <= 0.5:
+          print(f"Best fitness at generation {j}: {fit(best, clear_audio_path, hash_table, m1, q1, or_times, constellation_map_alg, threshold, fan_out, max_key_distance, max_distance_atan, effects_map)}\n")
+          Path(temp_mp3_clear_audio_path).unlink(missing_ok=True)
+
+          return fit(best, clear_audio_path, hash_table, m1, q1, or_times, constellation_map_alg, threshold, fan_out, max_key_distance, max_distance_atan, effects_map)
+      
     print(f"Best fitness at generation {j}: {fit(best, clear_audio_path, hash_table, m1, q1, or_times, constellation_map_alg, threshold, fan_out, max_key_distance, max_distance_atan, effects_map)}\n")
 
+  Path(temp_mp3_clear_audio_path).unlink(missing_ok=True)
   return fit(best, clear_audio_path, hash_table, m1, q1, or_times, constellation_map_alg, threshold, fan_out, max_key_distance, max_distance_atan, effects_map)
 
 def GA_lines_comp_pm_pc_adaptive(clear_audio_path, desired_audio_path, threshold, fan_out, max_distance_atan, max_key_distance, constellation_map_alg, fit, pop_size, p_mutation, p_crossover, p_pop_item, p_add_new_effect, n_iter, t_size, effects, effect_structure, effects_map, theta_1, theta_2):
@@ -561,7 +573,7 @@ def GA_lines_comp_pm_pc_adaptive(clear_audio_path, desired_audio_path, threshold
     
     for x in offsprings_cross:
         if random.random() < p_mutation:
-            of1 = aggressive_mutation(inner_mutation(x, effect_structure), p_pop_item, p_add_new_effect, effects, effect_structure, p_mutation)
+            of1 = mutation(inner_mutation(x, effect_structure), p_pop_item, p_add_new_effect, effects, effect_structure)
             offspring_to_mutate.append(of1)  # Add the mutated offspring to evaluate
             mutation_progress.append(p1_fitness)  # Just parent fitness for now
             offsprings.append(of1)
@@ -583,7 +595,7 @@ def GA_lines_comp_pm_pc_adaptive(clear_audio_path, desired_audio_path, threshold
     offsprings = []
     for x in offsprings_cross:
         if random.random() < p_mutation:
-            of1 = aggressive_mutation(inner_mutation(x, effect_structure), p_pop_item, p_add_new_effect, effects, effect_structure, p_mutation)
+            of1 = mutation(inner_mutation(x, effect_structure), p_pop_item, p_add_new_effect, effects, effect_structure)
             p1, p1_fitness = fit(x, clear_audio_path, hash_table, m1, q1, or_times, constellation_map_alg, threshold, fan_out, max_key_distance, max_distance_atan, effects_map)
             of1, of1_fitness = fit(of1, clear_audio_path, hash_table, m1, q1, or_times, constellation_map_alg, threshold, fan_out, max_key_distance, max_distance_atan, effects_map)
             mutation_progress.append(p1_fitness - of1_fitness) # analog case for this
