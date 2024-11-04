@@ -5,6 +5,10 @@
 /dataset_creation/audios/
 /dataset_creation/violin_audios/
 /dataset_creation/audios_low_ranges/
+/dataset_creation/audios_1_effect/
+/dataset_creation/audios_low_ranges_w_clean/
+/dataset_creation/audios_low_ranges_pumped/
+/dataset_creation/audio_mono-mic/
 
 #ignore big file soundfont
 /audio2midi2audio/FluidR3_GM.sf2
