@@ -65,6 +65,8 @@ effects_map = {
     5: 'Reverb',
 }
 
+onset_threshold = 0.6
+frame_threshold = 0.4
 
 instrument_program = 30 #guitar 30, violin 40
 fitness = fitness_spectrograms_comp
@@ -74,29 +76,24 @@ p_mutation = 0.8
 p_crossover = 0.6
 p_pop_item = 0.5
 p_add_new_effect = 0.5
-n_iter = 15 #25 #15 * 250
+n_iter = 15  #25 #15 * 250
 t_size = 5
 
 soundfont = '../audio2midi2audio/FluidR3_GM.sf2'  # Path to your SoundFont file
 clear_audio_path = 'clear_audio.mp3'
 midi_path = 'clear_midi.mid'    
 
-df = pd.read_csv('../results/dataset_audios_guitar_low_ranges_w_clean_150_25.csv')
+df = pd.read_csv('../results/dataset_audios_guitar_low_ranges_w_model_spectr_fit_opt_model_params.csv')
 df['GA_effects'] = pd.Series('')        
 df['similarity_indv'] = pd.Series('')        
 df['similarity_indvs'] = pd.Series('')        
 df['best_fit'] = pd.Series('')      
 df['best_fitnesses'] = pd.Series('')      
 df['GA_bests'] = pd.Series('')      
-df.to_csv('../results/dataset_audios_guitar_low_ranges_w_clean_150_25.csv', index=False)
+df.to_csv('../results/dataset_audios_guitar_low_ranges_w_model_spectr_fit_opt_model_params.csv', index=False)
 
 
 def dataset_GA_execution_general(df, 
-                            threshold,
-                            fan_out,
-                            max_distance_atan,
-                            max_key_distance,
-                            instrument_program,
                             fitness,
                             pop_size,
                             p_mutation,
@@ -110,7 +107,10 @@ def dataset_GA_execution_general(df,
                             midi_path,
                             effects,
                             effect_structure,
-                            effects_map):
+                            effects_map,
+                            onset_threshold, 
+                            frame_threshold,
+                            instrument_program):
     
     temp_data_ga_effects = []
     temp_data_ga_fitness = []
@@ -121,14 +121,14 @@ def dataset_GA_execution_general(df,
         desired_audio_path = '../dataset_creation/audios_low_ranges_w_clean/' + row["audio_name"]
         
         name_parts = row["audio_name"].split('.')
-        clean_audio_path = f"../dataset_creation/audios_low_ranges_w_clean/{name_parts[0]}_clean.{name_parts[1]}"
+        #clean_audio_path = f"../dataset_creation/audios_low_ranges_w_clean/{name_parts[0]}_clean.{name_parts[1]}"
         #desired_audio_path = '../dataset_creation/test_audios/78.mp3'
         print(desired_audio_path)
-        print(clean_audio_path)
-        #mp3_to_midi(desired_audio_path, midi_path, onset_threshold, frame_threshold, instrument_program)
-        #midi_to_mp3(midi_path, clear_audio_path, soundfont)
+        #print(clean_audio_path)
+        mp3_to_midi(desired_audio_path, midi_path, onset_threshold, frame_threshold, instrument_program)
+        midi_to_mp3(midi_path, clear_audio_path, soundfont)
         
-        best, best_individs, best_fitnesses = GA_spectro_comp(clean_audio_path, 
+        best, best_individs, best_fitnesses = GA_spectro_comp(clear_audio_path, 
                                         desired_audio_path,
                                         fitness,
                                         pop_size,
@@ -149,19 +149,11 @@ def dataset_GA_execution_general(df,
         df['GA_effects'] = pd.Series(temp_data_ga_effects)        
         df['GA_bests'] = pd.Series(temp_data_ga_bests_saved)        
         df['best_fit'] = pd.Series(temp_data_ga_fitness)        
-        df['best_fitnesses'] = pd.Series(temp_data_ga_best_fitnesses)        
-        df.to_csv('../results/dataset_audios_guitar_low_ranges_w_clean_150_25.csv', index=False)
+        df['best_fitnesses'] = pd.Series(temp_data_ga_best_fitnesses)      
+        df.to_csv('../results/dataset_audios_guitar_low_ranges_w_model_spectr_fit_opt_model_params.csv', index=False)
 
 if __name__ == '__main__':
     dataset_GA_execution_general(df, 
-                            onset_threshold,
-                            frame_threshold,
-                            threshold,
-                            fan_out,
-                            max_distance_atan,
-                            max_key_distance,
-                            instrument_program,
-                            constellation_map_alg,
                             fitness,
                             pop_size,
                             p_mutation,
@@ -175,4 +167,7 @@ if __name__ == '__main__':
                             midi_path,
                             effects,
                             effect_structure,
-                            effects_map)
+                            effects_map,
+                            onset_threshold, 
+                            frame_threshold,
+                            instrument_program)

@@ -231,7 +231,7 @@ def spectrogram_ssim_fitness(audio_1, audio_2):
     S2_norm = (S2 - S2.min()) / (S2.max() - S2.min())
 
     # Compute SSIM
-    ssim_score, _ = ssim(S1_norm, S2_norm, data_range=1.0, full=True)
+    ssim_score = ssim(S1_norm, S2_norm, data_range=1.0)
     return ssim_score
 
 def fitness_spectrograms_comp(individual, clear_audio_path, desired_audio_path, effects_map):
@@ -261,7 +261,7 @@ def fitness_spectrograms_comp(individual, clear_audio_path, desired_audio_path, 
     return individual, ssim_fitness
 
 def parallel_fitness_calculation_lines_comp(pop, clear_audio_path, hash_table, m1, q1, or_times, constellation_map_alg, threshold, fan_out, fit, max_key_distance, max_distance_atan, effects_map):
-    n_workers = 16
+    n_workers = 8
     results = []
 
     with concurrent.futures.ProcessPoolExecutor(max_workers=n_workers) as executor:
@@ -277,7 +277,7 @@ def parallel_fitness_calculation_lines_comp(pop, clear_audio_path, hash_table, m
     return results
 
 def parallel_fitness_calculation_spectro_comp(pop, clear_audio_path, desired_audio_path, fit, effects_map):
-    n_workers = 16
+    n_workers = 8
     results = []
 
     with concurrent.futures.ProcessPoolExecutor(max_workers=n_workers) as executor:
@@ -305,10 +305,6 @@ def mutation(individual, p_pop_item, p_add_new_effect, effects, effect_structure
     offspring = deepcopy(individual)
     items = list(offspring.items())
     
-    if random.random() < p_pop_item:
-        items.pop(random.randrange(len(items))) 
-        return dict(items)
-    
     available_effects = set(effects) - set(offspring.keys())
     if not available_effects:
         if random.random() < p_pop_item:
@@ -319,6 +315,10 @@ def mutation(individual, p_pop_item, p_add_new_effect, effects, effect_structure
         
     effect = random.choice(list(available_effects))
     structure = effect_structure[effect]
+    
+    if random.random() < p_pop_item:
+        items.pop(random.randrange(len(items))) 
+        return dict(items)
     
     #randomly decide between replacing an existing effect or adding a new one
     if random.random() < p_add_new_effect:
@@ -432,10 +432,17 @@ def crossover(parent_1, parent_2):
 
     return offspring_1, offspring_2
 
-def tournament_selection_with_precomputed_fitness(pop_with_fitness, t_size):
+def tournament_selection_with_precomputed_fitness_min(pop_with_fitness, t_size):
     tournament = random.choices(pop_with_fitness, k=t_size)
 
     best_individual, best_fitness = min(tournament, key=lambda x: x[1])  # x[1] is the fitness value
+
+    return best_individual
+
+def tournament_selection_with_precomputed_fitness_max(pop_with_fitness, t_size):
+    tournament = random.choices(pop_with_fitness, k=t_size)
+
+    best_individual, best_fitness = max(tournament, key=lambda x: x[1])  # x[1] is the fitness value
 
     return best_individual
 
@@ -444,6 +451,87 @@ def init_population(pop_size, effects, effect_structure):
     for _ in range(pop_size):
         pop.append(create_individual(effects, effect_structure))
     return pop
+
+def normalize(value, min_val, max_val):
+    return (value - min_val) / (max_val - min_val)
+
+def similarity_array(individ, effect_structure, n_effects):
+    sim_array = np.zeros(n_effects)
+
+    for effect_id, params in individ.items():
+        for param_name, param_value in params.items():
+            
+            if effect_id == 3 and param_name == 'gain_db':
+                param_value += 10  # Apply the translation
+                
+            _, (min_val, max_val) = effect_structure[effect_id][param_name]
+            # Normalize the parameter value
+            normalized_value = normalize(param_value, min_val, max_val)
+            # Assign the normalized value to the corresponding position in B
+            sim_array[effect_id] = normalized_value
+
+    # Convert B to a numpy array A
+    return np.array(sim_array)
+
+def similarity_calculation(sim_array1, sim_array2, sim_max):
+    sim = np.sqrt(np.sum(np.square(sim_array1 - sim_array2)))
+    return (sim_max - sim)/ sim_max
+
+def shared_fitness_spectro_comp(pop_with_fitness, alpha, beta, sigma):
+    ones = np.ones(6)  
+    zeros = np.zeros(6)
+    sim_max = np.sqrt(np.sum(np.square(ones - zeros))) #similarità euclidea
+
+    effect_structure = {
+        0: { "rate_hz": ('float', (0.0, 20.0)) },  # Chorus
+        1: { "delay_seconds": ('float', (0.0, 5.0)) },  # Delay
+        2: { "drive_db": ('float', (0.0, 20.0)) },  # Distortion
+        3: { "gain_db": ('float', (0, 20.0)) },  # Gain
+        4: { "depth": ('float', (0.0, 0.6)) },  # Phaser
+        5: { "wet_level": ('float', (0.0, 0.6)) },  # Reverb
+    }
+
+    shared_fitness_values = []
+    for x, raw_fitness in pop_with_fitness:
+        penalty_sum = sum(
+            1 - ((1 - similarity_calculation(similarity_array(x, effect_structure, len(effect_structure)), 
+                                        similarity_array(y, effect_structure, len(effect_structure)), sim_max)) / sigma) ** alpha
+            if (1 - similarity_calculation(similarity_array(x, effect_structure, len(effect_structure)),
+                                      similarity_array(y, effect_structure, len(effect_structure)), sim_max)) <= sigma
+            else 0
+            for y, _ in pop_with_fitness
+        )
+        scaled_fitness = (raw_fitness ** beta) / penalty_sum
+        shared_fitness_values.append((x, scaled_fitness))
+    return shared_fitness_values
+
+def shared_fitness_lines_comp(pop_with_fitness, alpha, beta, sigma):
+    ones = np.ones(6)  
+    zeros = np.zeros(6)
+    sim_max = np.sqrt(np.sum(np.square(ones - zeros))) #similarità euclidea
+
+    effect_structure = {
+        0: { "rate_hz": ('float', (0.0, 20.0)) },  # Chorus
+        1: { "delay_seconds": ('float', (0.0, 5.0)) },  # Delay
+        2: { "drive_db": ('float', (0.0, 20.0)) },  # Distortion
+        3: { "gain_db": ('float', (0, 20.0)) },  # Gain
+        4: { "depth": ('float', (0.0, 0.6)) },  # Phaser
+        5: { "wet_level": ('float', (0.0, 0.6)) },  # Reverb
+    }
+
+    shared_fitness_values = []
+    for x, raw_fitness in pop_with_fitness:
+        penalty_sum = sum(
+            1 - ((1 - similarity_calculation(similarity_array(x, effect_structure, len(effect_structure)), 
+                                        similarity_array(y, effect_structure, len(effect_structure)), sim_max)) / sigma) ** alpha
+            if (1 - similarity_calculation(similarity_array(x, effect_structure, len(effect_structure)),
+                                      similarity_array(y, effect_structure, len(effect_structure)), sim_max)) <= sigma
+            else 0
+            for y, _ in pop_with_fitness
+        )
+        scaled_fitness = (raw_fitness ** beta) * penalty_sum
+        shared_fitness_values.append((x, scaled_fitness))
+    return shared_fitness_values
 
 def GA_lines_comp(clear_audio_path, desired_audio_path, threshold, fan_out, max_distance_atan, max_key_distance, constellation_map_alg, fit, pop_size, p_mutation, p_crossover, p_pop_item, p_add_new_effect, n_iter, t_size, effects, effect_structure, effects_map):
   pop = init_population(pop_size, effects, effect_structure)
@@ -465,6 +553,10 @@ def GA_lines_comp(clear_audio_path, desired_audio_path, threshold, fan_out, max_
   best = {}
   best_saves = []
   best_fitnesses = []
+  
+  alpha = 1.0
+  beta = 3.0
+  sigma = 0.408248290463863 #distance between [0. 0. 0. 0. 0. 0.] and [1. 0. 0. 0. 0. 0.]
 
   j = 0
   for i in range(0, n_iter):
@@ -474,9 +566,11 @@ def GA_lines_comp(clear_audio_path, desired_audio_path, threshold, fan_out, max_
         pop, clear_audio_path, hash_table, m1, q1, or_times, constellation_map_alg, threshold, fan_out, fit, max_key_distance, max_distance_atan, effects_map
     )
     
+    pop_with_shared_fitness = shared_fitness_spectro_comp(pop_with_fitness, alpha, beta, sigma)
+    
     print(f'TOURNAMENT SELECTION')
     selected = [
-        tournament_selection_with_precomputed_fitness(pop_with_fitness, t_size) 
+        tournament_selection_with_precomputed_fitness_min(pop_with_shared_fitness, t_size) 
         for _ in range(pop_size)
     ]  
          
@@ -537,6 +631,10 @@ def GA_spectro_comp(clear_audio_path, desired_audio_path, fit, pop_size, p_mutat
   best = {}
   best_saves = []
   best_fitnesses = []
+  
+  alpha = 1.0
+  beta = 3.0
+  sigma = 0.408248290463863 #distance between [0. 0. 0. 0. 0. 0.] and [1. 0. 0. 0. 0. 0.]
 
   j = 0
   for i in range(0, n_iter):
@@ -546,9 +644,11 @@ def GA_spectro_comp(clear_audio_path, desired_audio_path, fit, pop_size, p_mutat
         pop, clear_audio_path, desired_audio_path, fit, effects_map
     )
     
+    pop_with_shared_fitness = shared_fitness_lines_comp(pop_with_fitness, alpha, beta, sigma)
+    
     print(f'TOURNAMENT SELECTION')
     selected = [
-        tournament_selection_with_precomputed_fitness(pop_with_fitness, t_size) 
+        tournament_selection_with_precomputed_fitness_max(pop_with_shared_fitness, t_size) 
         for _ in range(pop_size)
     ]  
          
@@ -579,22 +679,22 @@ def GA_spectro_comp(clear_audio_path, desired_audio_path, fit, pop_size, p_mutat
     pop_with_fitness = parallel_fitness_calculation_spectro_comp(
         pop, clear_audio_path, desired_audio_path, fit, effects_map
     )
-    
-    best_candidate, best_candidate_fitness = min(pop_with_fitness, key=lambda x: x[1])  # x[1] is the fitness value
+        
+    best_candidate, best_candidate_fitness = max(pop_with_fitness, key=lambda x: x[1])  # x[1] is the fitness value
     best_so_far, best_so_far_fitness = fit(best, clear_audio_path, desired_audio_path, effects_map)
     
     print(f"Best candidate found: {best_candidate}")
     print(f"\nCandidate fitness: {best_candidate_fitness} , best fitness so far: {best_so_far_fitness}")
-    if best_candidate_fitness < best_so_far_fitness:
+    if best_candidate_fitness > best_so_far_fitness:
       best = best_candidate
       j = i
-      if best_candidate_fitness <= 0.1:
+      if best_candidate_fitness >= 0.999991:
           best_fitnesses.append(best_candidate_fitness)
           best_saves.append(best)
           print(f"Best fitness at generation {j}: {fit(best, clear_audio_path, desired_audio_path, effects_map)}\n")
           return fit(best, clear_audio_path, desired_audio_path, effects_map), best_saves, best_fitnesses
               
-    if best_candidate_fitness < best_so_far_fitness:
+    if best_candidate_fitness > best_so_far_fitness:
         best_fitnesses.append(best_candidate_fitness)
     else:
         best_fitnesses.append(best_so_far_fitness)

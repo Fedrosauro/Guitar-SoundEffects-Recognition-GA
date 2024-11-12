@@ -85,9 +85,8 @@ def mp3_to_midi_w_return(audio_path, midi_path, onset_threshold, frame_threshold
     
     return midi_data
 
-def midi_to_mp3_w_path_remov(midi_file, audio_path, soundfont):
+def midi_to_mp3_w_path_remov(midi_file, audio_path, fs):
     #convert MIDI to WAV using FluidSynth
-    fs = FluidSynth(soundfont)
     wav_file = midi_file.replace('.midi', '.wav').replace('.mid', '.wav')
     fs.midi_to_audio(midi_file, wav_file)
 
@@ -99,12 +98,12 @@ def midi_to_mp3_w_path_remov(midi_file, audio_path, soundfont):
 
     #print(f"Conversion complete: {audio_path}")
 
-def process_data_generation_lines(soundfont, program, min_note, max_note, min_duration, max_duration, effects, effect_structure, effects_map, threshold, fan_out, max_distance_atan, onset_threshold, frame_threshold, max_key_distance):   
+def process_data_generation_lines(fs, program, min_note, max_note, min_duration, max_duration, effects, effect_structure, effects_map, threshold, fan_out, max_distance_atan, onset_threshold, frame_threshold, max_key_distance):   
     # Create temporary MIDI and MP3 files
-    fd_midi_init, temp_midi_init_name = tempfile.mkstemp(suffix='.mid', dir="../temp_files/")
-    fd_midi_gen, temp_midi_gen_name = tempfile.mkstemp(suffix='.mid', dir="../temp_files/")
-    fd_mp3_init, temp_mp3_init_name = tempfile.mkstemp(suffix='.mp3', dir="../temp_files/")
-    fd_mp3_gen, temp_mp3_gen_name = tempfile.mkstemp(suffix='.mp3', dir="../temp_files/")
+    fd_midi_init, temp_midi_init_name = tempfile.mkstemp(suffix='.mid', dir="../t_files/")
+    fd_midi_gen, temp_midi_gen_name = tempfile.mkstemp(suffix='.mid', dir="../t_files/")
+    fd_mp3_init, temp_mp3_init_name = tempfile.mkstemp(suffix='.mp3', dir="../t_files/")
+    fd_mp3_gen, temp_mp3_gen_name = tempfile.mkstemp(suffix='.mp3', dir="../t_files/")
     
     # Close file descriptors as we only need the file paths
     os.close(fd_midi_init)
@@ -128,7 +127,7 @@ def process_data_generation_lines(soundfont, program, min_note, max_note, min_du
     
     # Generate the MIDI data and apply effects
     initial_midi_data = generate_random_instrument_midi(temp_midi_init_name, program, min_duration, max_duration, min_note, max_note)
-    midi_to_mp3_w_path_remov(temp_midi_init_name, temp_mp3_init_name, soundfont)
+    midi_to_mp3_w_path_remov(temp_midi_init_name, temp_mp3_init_name, fs)
     
     peaks_original = z_score_peaks_calculation(temp_mp3_init_name, threshold)
     hashes0 = generate_hashes(peaks_original, fan_out)
@@ -144,12 +143,12 @@ def process_data_generation_lines(soundfont, program, min_note, max_note, min_du
         board.append(effect_class(**params))
         
     # Apply effects and create the effected audio
-    fd_effected_audio_name, temp_effected_audio_name = tempfile.mkstemp(suffix='.mp3', dir="../temp_files/")  # Temporary file for effected audio
+    fd_effected_audio_name, temp_effected_audio_name = tempfile.mkstemp(suffix='.mp3', dir="../t_files/")  # Temporary file for effected audio
     os.close(fd_effected_audio_name)
 
     create_effected_audio_for_parallelization(board, temp_mp3_init_name, temp_effected_audio_name)   
     generated_midi_data = mp3_to_midi_w_return(temp_effected_audio_name, temp_midi_gen_name, onset_threshold, frame_threshold)
-    midi_to_mp3_w_path_remov(temp_midi_gen_name, temp_mp3_gen_name, soundfont)
+    midi_to_mp3_w_path_remov(temp_midi_gen_name, temp_mp3_gen_name, fs)
     
     peaks_temp = z_score_peaks_calculation(temp_mp3_gen_name, threshold)
     hashes_temp = generate_hashes(peaks_temp, fan_out)
@@ -211,12 +210,14 @@ def test_model_db_creation_parallel(data, n_data, csv_filename, soundfont, progr
         threshold,
         fan_out,
         [max_distance_atan],
-        [onset_threshold],  
-        [frame_threshold],  
+        onset_threshold,  
+        frame_threshold,  
         [max_key_distance]
     ))
     
-    n_workers = 7
+    fs = FluidSynth(soundfont)
+
+    n_workers = 16
     
     with concurrent.futures.ProcessPoolExecutor(max_workers=n_workers) as executor:
         futures = []
@@ -228,7 +229,7 @@ def test_model_db_creation_parallel(data, n_data, csv_filename, soundfont, progr
             for _ in range(n_data):  # Generate n_data for each combination
                 futures.append(
                     executor.submit(
-                        process_data_generation_lines, soundfont, program, min_note, max_note, min_duration, max_duration, 
+                        process_data_generation_lines, fs, program, min_note, max_note, min_duration, max_duration, 
                         effects, effect_structure, effects_map, threshold, fan_out, max_distance_atan, onset_threshold, frame_threshold, max_key_distance
                     )
                 )
@@ -281,34 +282,26 @@ soundfont = '../audio2midi2audio/FluidR3_GM.sf2'  # Path to your SoundFont file
 program = 30
 min_note = 'E2'
 max_note = 'E6' # Generate a random note between MIDI note 40 (E2) and 88 (E6)
-min_duration = 5
+min_duration = 10
 max_duration = 20
 
-#EXTERNAL PARAMS
-threshold = 1.5 #best value found
-fan_out = 10 #best value found
-max_distance_atan = 20 #best value found
-onset_threshold = 0.5  # standard value that is used by the library (no need to be changed)
-frame_threshold = 0.3  # standard value that is used by the library (no need to be changed)
-max_key_distance = 50 #best value found
-
-threshold_values = np.arange(0.0, 3.2, 0.01)
-fan_out_values = np.arange(5, 35, 5)
-#max_distance_atan_values = np.arange(90, 110, 10)
-#onset_threshold_values = np.arange(0.4, 0.8, 0.2)
-#frame_threshold_values = np.arange(0.4, 0.8, 0.2)
-#max_key_distance_values = np.arange(20, 60, 20)
+threshold = np.arange(1.5, 3.1, 0.1)
+fan_out = np.arange(15, 35, 5)
+max_distance_atan = 50
+onset_threshold = np.arange(0.1, 1.0, 0.1)
+frame_threshold = np.arange(0.1, 1.0, 0.1)
+max_key_distance = 50
 
 #effects used
 n_effects = 6
 effects = [i for i in range(n_effects)]
 effect_structure = {
-    0: { "rate_hz": ('float', (0.0, 100.0)), },# Chorus
-    1: { "delay_seconds": ('float', (0.0, 10.0)), },# Delay
-    2: { "drive_db": ('float', (0.0, 50.0)), },# Distortion
-    3: { "gain_db": ('float', (-50.0, 50.0)) },# Gain
-    4: { "depth": ('float', (0.0, 1.0)), },# Phaser
-    5: { "wet_level": ('float', (0.0, 1.0)), },# Reverb
+    0: { "rate_hz": ('float', (1.0, 20.0)), },# Chorus
+    1: { "delay_seconds": ('float', (1.0, 5.0)), },# Delay
+    2: { "drive_db": ('float', (1.0, 20.0)), },# Distortion
+    3: { "gain_db": ('float', (-10.0, 10.0)) },# Gain
+    4: { "depth": ('float', (0.2, 0.6)), },# Phaser
+    5: { "wet_level": ('float', (0.2, 0.6)), },# Reverb
 }
 effects_map = {
     0: 'Chorus',
@@ -322,5 +315,5 @@ effects_map = {
 # Test with the parameter combinations
 if __name__ == '__main__':
     start = time.time()
-    test_model_db_creation_parallel(data, n_data, csv_filename, soundfont, program, min_note, max_note, min_duration, max_duration, effects, effect_structure, effects_map, threshold_values, fan_out_values, max_distance_atan, onset_threshold, frame_threshold, max_key_distance)
+    test_model_db_creation_parallel(data, n_data, csv_filename, soundfont, program, min_note, max_note, min_duration, max_duration, effects, effect_structure, effects_map, threshold, fan_out, max_distance_atan, onset_threshold, frame_threshold, max_key_distance)
     print(f"Total time: {time.time() - start}")
